@@ -1,0 +1,39 @@
+.s-hero {
+    .s-hero-container {
+        padding: 100px 120px;
+
+        h1 {
+            font-family: 'Neue Machina bold';
+            font-size: 90px;
+            width: 100%;
+            max-width: 1092px;
+            line-height: 93.6px;
+            letter-spacing: 0em;
+            padding: 30px 0;
+        }
+
+        p {
+            width: 100%;
+            max-width: 822px;
+            margin: 0 auto;
+            font-family: 'Neue Machina Regular';
+            text-align: center;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 29px;
+            letter-spacing: 0em;
+
+        }
+
+        .button-block {
+            display: flex;
+            justify-content: center;
+            padding: 40px 0 20px;
+            a{
+                font-family: 'Neue Machina bold';
+                font-size: 18px;
+            line-height: 17.37px;
+            }
+        }
+    }
+}

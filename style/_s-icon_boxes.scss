@@ -1,0 +1,71 @@
+.s-icon_boxes {
+    // padding-top: ;
+    ._container {
+        padding: 100px 120px 80px 120px;
+
+        .title-block {
+            padding-bottom: 50px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1092px;
+
+            .title {}
+
+            .subtitle {
+                text-align: center;
+                padding: 22px 0;
+            }
+        }
+
+        .icon_boxes {
+
+            display: flex;
+            justify-content: space-between;
+
+            :not(:first-child, :last-child) {
+                margin: 0 24px;
+            }
+
+            .icon-box {
+                // border: 1px solid red;
+                display: flex;
+                flex-direction: column;
+
+                .icon {
+                    padding: 59px 0 40px 0;
+                    margin: 0 auto;
+                    img{
+                        height: 120px;
+                    }
+                }
+
+                .icon_text-block {
+                    margin: 0 auto;
+                    width: 100%;
+                    max-width: 332px;
+
+                    h4 {
+                        font-family: 'Neue Machina bold';
+                        padding-bottom: 14px;
+                        font-size: 22px;
+                        line-height: 29px;
+                        letter-spacing: 0em;
+                        text-align: center;
+
+                    }
+
+                    p {
+                        font-family: 'Neue Machina regular';
+                        font-size: 16px;
+                        text-align: center;
+                        padding-bottom: 54px;
+                        line-height: 23px;
+                        letter-spacing: 0em;
+                        text-align: center;
+                    }
+                }
+
+            }
+        }
+    }
+}

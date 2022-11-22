@@ -1,0 +1,564 @@
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../assets/fonts-files/NeueMachina-Bold.eot");
+  src: url("../assets/fonts-files/NeueMachina-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts-files/NeueMachina-Bold.woff2") format("woff2"), url("../assets/fonts-files/NeueMachina-Bold.woff") format("woff"), url("../assets/fonts-files/NeueMachina-Bold.ttf") format("truetype"), url("../assets/fonts-files/NeueMachina-Bold.svg#NeueMachina-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina regular";
+  src: url("../assets/fonts-files/NeueMachina-Regular.eot");
+  src: url("../assets/fonts-files/NeueMachina-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts-files/NeueMachina-Regular.woff2") format("woff2"), url("../assets/fonts-files/NeueMachina-Regular.woff") format("woff"), url("../assets/fonts-files/NeueMachina-Regular.ttf") format("truetype"), url("../assets/fonts-files/NeueMachina-Regular.svg#NeueMachina-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina medium";
+  src: url("../assets/fonts-files/NeueMachina-Medium.eot");
+  src: url("../assets/fonts-files/NeueMachina-Medium.eot?#iefix") format("embedded-opentype"), url("../assets/fonts-files/NeueMachina-Medium.woff2") format("woff2"), url("../assets/fonts-files/NeueMachina-Medium.woff") format("woff"), url("../assets/fonts-files/NeueMachina-Medium.ttf") format("truetype"), url("../assets/fonts-files/NeueMachina-Medium.svg#NeueMachina-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../assets/fonts-files/NeueMachina-Ultrabold.eot");
+  src: url("../assets/fonts-files/NeueMachina-Ultrabold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts-files/NeueMachina-Ultrabold.woff2") format("woff2"), url("../assets/fonts-files/NeueMachina-Ultrabold.woff") format("woff"), url("../assets/fonts-files/NeueMachina-Ultrabold.ttf") format("truetype"), url("../assets/fonts-files/NeueMachina-Ultrabold.svg#NeueMachina-Ultrabold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina bold";
+  src: url("../assets/fonts-files/NeueMachina-Bold_1.eot");
+  src: url("../assets/fonts-files/NeueMachina-Bold_1.eot?#iefix") format("embedded-opentype"), url("../assets/fonts-files/NeueMachina-Bold_1.woff2") format("woff2"), url("../assets/fonts-files/NeueMachina-Bold_1.woff") format("woff"), url("../assets/fonts-files/NeueMachina-Bold_1.ttf") format("truetype"), url("../assets/fonts-files/NeueMachina-Bold_1.svg#NeueMachina-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../assets/fonts-files/NeueMachina-Medium_1.eot");
+  src: url("../assets/fonts-files/NeueMachina-Medium_1.eot?#iefix") format("embedded-opentype"), url("../assets/fonts-files/NeueMachina-Medium_1.woff2") format("woff2"), url("../assets/fonts-files/NeueMachina-Medium_1.woff") format("woff"), url("../assets/fonts-files/NeueMachina-Medium_1.ttf") format("truetype"), url("../assets/fonts-files/NeueMachina-Medium_1.svg#NeueMachina-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../assets/fonts-files/NeueMachina-Regular_1.eot");
+  src: url("../assets/fonts-files/NeueMachina-Regular_1.eot?#iefix") format("embedded-opentype"), url("../assets/fonts-files/NeueMachina-Regular_1.woff2") format("woff2"), url("../assets/fonts-files/NeueMachina-Regular_1.woff") format("woff"), url("../assets/fonts-files/NeueMachina-Regular_1.ttf") format("truetype"), url("../assets/fonts-files/NeueMachina-Regular_1.svg#NeueMachina-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../assets/fonts-files/NeueMachina-Ultrabold_1.eot");
+  src: url("../assets/fonts-files/NeueMachina-Ultrabold_1.eot?#iefix") format("embedded-opentype"), url("../assets/fonts-files/NeueMachina-Ultrabold_1.woff2") format("woff2"), url("../assets/fonts-files/NeueMachina-Ultrabold_1.woff") format("woff"), url("../assets/fonts-files/NeueMachina-Ultrabold_1.ttf") format("truetype"), url("../assets/fonts-files/NeueMachina-Ultrabold_1.svg#NeueMachina-Ultrabold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina bold";
+  src: url("../assets/fonts-files/NeueMachina-Bold_2.eot");
+  src: url("../assets/fonts-files/NeueMachina-Bold_2.eot?#iefix") format("embedded-opentype"), url("../assets/fonts-files/NeueMachina-Bold_2.woff2") format("woff2"), url("../assets/fonts-files/NeueMachina-Bold_2.woff") format("woff"), url("../assets/fonts-files/NeueMachina-Bold_2.ttf") format("truetype"), url("../assets/fonts-files/NeueMachina-Bold_2.svg#NeueMachina-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina ultrabold";
+  src: url("../assets/fonts-files/NeueMachina-Ultrabold_2.eot");
+  src: url("../assets/fonts-files/NeueMachina-Ultrabold_2.eot?#iefix") format("embedded-opentype"), url("../assets/fonts-files/NeueMachina-Ultrabold_2.woff2") format("woff2"), url("../assets/fonts-files/NeueMachina-Ultrabold_2.woff") format("woff"), url("../assets/fonts-files/NeueMachina-Ultrabold_2.ttf") format("truetype"), url("../assets/fonts-files/NeueMachina-Ultrabold_2.svg#NeueMachina-Ultrabold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../assets/fonts-files/NeueMachina-Medium_2.eot");
+  src: url("../assets/fonts-files/NeueMachina-Medium_2.eot?#iefix") format("embedded-opentype"), url("../assets/fonts-files/NeueMachina-Medium_2.woff2") format("woff2"), url("../assets/fonts-files/NeueMachina-Medium_2.woff") format("woff"), url("../assets/fonts-files/NeueMachina-Medium_2.ttf") format("truetype"), url("../assets/fonts-files/NeueMachina-Medium_2.svg#NeueMachina-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../assets/fonts-files/NeueMachina-Regular_2.eot");
+  src: url("../assets/fonts-files/NeueMachina-Regular_2.eot?#iefix") format("embedded-opentype"), url("../assets/fonts-files/NeueMachina-Regular_2.woff2") format("woff2"), url("../assets/fonts-files/NeueMachina-Regular_2.woff") format("woff"), url("../assets/fonts-files/NeueMachina-Regular_2.ttf") format("truetype"), url("../assets/fonts-files/NeueMachina-Regular_2.svg#NeueMachina-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.header {
+  width: 100%;
+}
+.header .header-container {
+  padding: 38px 60px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header-container .menu .menu-list {
+  display: flex;
+  flex: 2 1 auto;
+  justify-self: center;
+  align-items: center;
+}
+.header .header-container .menu .menu-list :not(:last-child) {
+  margin: 0 21px 0 0;
+}
+.header .header-container .menu .menu-list .menu-item .menu-link {
+  color: inherit;
+  text-align: center;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+}
+.header .header-container .menu .menu-list .menu-item :hover {
+  transition: 0.5s;
+  font-size: 15px;
+  font-weight: 700;
+}
+.header .header-container .right-block {
+  display: flex;
+  align-items: center;
+}
+.header .header-container .right-block .lang-switch {
+  margin-right: 44px;
+}
+.header .header-container .right-block .lang-switch img {
+  border: 1px solid #D6D6D7;
+  border-radius: 2px;
+  padding: 2px 25px 2px 7px;
+}
+
+.s-hero .s-hero-container {
+  padding: 100px 120px;
+}
+.s-hero .s-hero-container h1 {
+  font-family: "Neue Machina bold";
+  font-size: 90px;
+  width: 100%;
+  max-width: 1092px;
+  line-height: 93.6px;
+  letter-spacing: 0em;
+  padding: 30px 0;
+}
+.s-hero .s-hero-container p {
+  width: 100%;
+  max-width: 822px;
+  margin: 0 auto;
+  font-family: "Neue Machina Regular";
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+}
+.s-hero .s-hero-container .button-block {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 20px;
+}
+.s-hero .s-hero-container .button-block a {
+  font-family: "Neue Machina bold";
+  font-size: 18px;
+  line-height: 17.37px;
+}
+
+.s-video .s-video-container {
+  padding: 0 120px 100px 120px;
+}
+.s-video .s-video-container video {
+  border-radius: 12px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.s-icon_boxes ._container {
+  padding: 100px 120px 80px 120px;
+}
+.s-icon_boxes ._container .title-block {
+  padding-bottom: 50px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1092px;
+}
+.s-icon_boxes ._container .title-block .subtitle {
+  text-align: center;
+  padding: 22px 0;
+}
+.s-icon_boxes ._container .icon_boxes {
+  display: flex;
+  justify-content: space-between;
+}
+.s-icon_boxes ._container .icon_boxes :not(:first-child, :last-child) {
+  margin: 0 24px;
+}
+.s-icon_boxes ._container .icon_boxes .icon-box {
+  display: flex;
+  flex-direction: column;
+}
+.s-icon_boxes ._container .icon_boxes .icon-box .icon {
+  padding: 59px 0 40px 0;
+  margin: 0 auto;
+}
+.s-icon_boxes ._container .icon_boxes .icon-box .icon img {
+  height: 120px;
+}
+.s-icon_boxes ._container .icon_boxes .icon-box .icon_text-block {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 332px;
+}
+.s-icon_boxes ._container .icon_boxes .icon-box .icon_text-block h4 {
+  font-family: "Neue Machina bold";
+  padding-bottom: 14px;
+  font-size: 22px;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.s-icon_boxes ._container .icon_boxes .icon-box .icon_text-block p {
+  font-family: "Neue Machina regular";
+  font-size: 16px;
+  text-align: center;
+  padding-bottom: 54px;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.s-small-cta ._container {
+  padding: 0 60px 60px;
+}
+.s-small-cta ._container .small-cta {
+  border: 1px solid gold;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+}
+.s-small-cta ._container .small-cta .description-block {
+  padding-left: 60px;
+}
+.s-small-cta ._container .small-cta .description-block h3 {
+  max-width: 488px;
+  text-align: start;
+  font-family: "Neue Machina bold";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0em;
+}
+.s-small-cta ._container .small-cta .description-block p {
+  max-width: 488px;
+  padding: 16px 0 20px 0;
+  text-align: start;
+}
+.s-small-cta ._container .small-cta .description-block p .specific-name-bold {
+  font-family: "Neue Machina bold";
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.s-small-cta ._container .small-cta .description-block .button {
+  font-family: "Neue Machina bold";
+  font-size: 16px;
+  padding: 14px 22px;
+}
+.s-small-cta ._container .small-cta .progress-block {
+  padding: 102px 120px 102px 0;
+}
+
+.s-purpose ._container {
+  padding: 120px 0 60px 120px;
+}
+.s-purpose ._container.reverse {
+  padding: 120px 120px 60px 0;
+}
+.s-purpose ._container .purpose-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.s-purpose ._container .purpose-block.reverse {
+  flex-direction: row-reverse;
+}
+.s-purpose ._container .purpose-block.reverse .text-block {
+  max-width: 482px;
+}
+.s-purpose ._container .purpose-block.reverse .text-block .top-text-block {
+  max-width: 482px;
+}
+.s-purpose ._container .purpose-block.reverse .image-block {
+  padding: 0 40px 0 0;
+}
+.s-purpose ._container .purpose-block .text-block {
+  max-width: 450px;
+}
+.s-purpose ._container .purpose-block .text-block .top-text-block {
+  max-width: 402px;
+}
+.s-purpose ._container .purpose-block .text-block .top-text-block * {
+  text-align: left;
+}
+.s-purpose ._container .purpose-block .text-block .top-text-block .title {
+  padding: 22px 0;
+}
+.s-purpose ._container .purpose-block .image-block {
+  padding-left: 40px;
+}
+.s-purpose ._container .purpose-block .image-block img {
+  min-width: 335px;
+  max-width: 100%;
+  height: auto;
+}
+
+.s-donate {
+  padding: 120px 20px 0;
+}
+.s-donate ._container {
+  min-height: 852px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  padding: 0 162px;
+  background-color: #F6FCFD;
+}
+.s-donate ._container .donate-top-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 0 0;
+}
+.s-donate ._container .donate-top-block img {
+  padding-bottom: 12px;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 46px;
+  max-width: 111px;
+}
+.s-donate ._container .donate-top-block h2 {
+  padding: 60px 0;
+}
+.s-donate ._container .donate-top-block .payment-switch-block {
+  border-bottom: 1px solid #482FF7;
+  display: flex;
+  justify-content: space-between;
+}
+.s-donate ._container .donate-top-block .payment-switch-block .button {
+  font-family: "Neue Machina bold";
+  font-size: 16px;
+  line-height: 23px;
+  padding: 16px 0 15px;
+  text-align: center;
+  width: 260px;
+  color: rgba(15, 11, 48, 0.6);
+}
+.s-donate ._container .donate-top-block .payment-switch-block .button.active {
+  color: #FFFFFF;
+}
+.s-donate ._container .donate-top-block .payment-switch-block .button.active.first {
+  background-color: #482FF7;
+}
+.s-donate ._container .donate-top-block .payment-switch-block .button.active.second {
+  background-color: #2D6CDF;
+}
+.s-donate ._container .donate-top-block .payment-switch-block .button.active.third {
+  background-color: #46C3DB;
+}
+.s-donate ._container .donate-top-block .payment-switch-block .button.active.fourth {
+  background-color: #0F0B30;
+}
+.s-donate ._container .payment-details-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.s-donate ._container .payment-details-blocks.first {
+  display: flex;
+}
+.s-donate ._container .payment-details-blocks.second {
+  display: flex;
+  display: none;
+}
+.s-donate ._container .payment-details-blocks.third {
+  display: flex;
+  display: none;
+}
+.s-donate ._container .payment-details-blocks.fourth {
+  display: flex;
+  display: none;
+}
+.s-donate ._container .payment-details-block-item {
+  padding-top: 68px;
+  width: 100%;
+  max-width: 502px;
+}
+.s-donate ._container .payment-details-block-item * {
+  text-align: left;
+}
+.s-donate ._container .payment-details-block-item .payment-details-block-title {
+  font-family: "Neue Machina ultrabold";
+  font-size: 22px;
+  line-height: 29px;
+  padding-bottom: 18px;
+}
+.s-donate ._container .payment-details-block-item hr {
+  width: 100%;
+  height: 1px;
+  background: rgba(15, 11, 48, 0.2);
+}
+.s-donate ._container .payment-details-block-item .payment-details-block-body {
+  padding-top: 24px;
+}
+.s-donate ._container .payment-details-block-item .payment-details-block-body .copy-button, .s-donate ._container .payment-details-block-item .payment-details-block-body .link-button {
+  max-width: 26px;
+  max-height: 26px;
+}
+.s-donate ._container .payment-details-block-item .payment-details-block-body .card-number-bold {
+  font-family: "Neue Machina bold";
+  font-size: 24px;
+  line-height: 35px;
+}
+.s-donate ._container .payment-details-block-item .payment-details-block-body .medium-name-16 {
+  font-family: "Neue Machina medium";
+  font-size: 16px;
+  line-height: 23px;
+}
+.s-donate ._container .payment-details-block-item .payment-details-block-body .medium-name-18 {
+  font-family: "Neue Machina medium";
+  font-size: 18px;
+  line-height: 26.28px;
+}
+.s-donate ._container .payment-details-block-item .payment-details-block-body .regular-name {
+  font-family: "Neue Machina regular";
+  font-size: 18px;
+  line-height: 26px;
+}
+.s-donate ._container .payment-details-block-item .payment-details-block-body .regular-name .bold-detail {
+  font-family: "Neue Machina bold";
+  font-size: 18px;
+}
+.s-donate ._container .payment-details-block-item .payment-details-block-body .payment-detail-copy {
+  display: flex;
+  justify-content: space-between;
+}
+
+*,
+*::before,
+::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  font-family: "Neue Machina";
+  color: #000;
+}
+
+._wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+._container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  color: white;
+  border-radius: 4px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+}
+
+.black-button {
+  padding: 13.5px 33.5px;
+  background-color: #0F0B30;
+}
+
+.blue-button {
+  padding: 18px 40px;
+  background-color: #482FF7;
+}
+
+.active {
+  background-color: #482FF7;
+  border-radius: 4px 4px 0 0;
+}
+
+.passive {
+  color: rgba(15, 11, 48, 0.6);
+}
+
+.title {
+  font-family: "Neue Machina bold";
+  font-size: 48px;
+  line-height: 53.76px;
+}
+
+.subtitle {
+  font-family: "Neue Machina regular";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+}
+
+.subheading {
+  font-family: "Neue Machina bold";
+  color: #2D6CDF;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+}
+
+.regular-text {
+  font-family: "Neue Machina regular";
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 0em;
+}/*# sourceMappingURL=style.css.map */

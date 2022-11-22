@@ -1,0 +1,126 @@
+@import 'fonts';
+@import 'header';
+@import 's-hero';
+@import 's-video';
+@import 's-icon_boxes';
+@import 's-small-cta';
+@import 's-purpose';
+@import 's-donate';
+
+
+
+*,
+*::before,
+::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    font-family: 'Neue Machina';
+    color: #000;
+}
+
+._wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+._container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+//-------------- кнопки не знаю куди виносити------
+.button {
+    display: inline-block;
+    color: white;
+    border-radius: 4px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0em;
+}
+
+.black-button {
+    padding: 13.5px 33.5px;
+    background-color: #0F0B30;
+}
+
+.blue-button {
+    padding: 18px 40px;
+    background-color: #482FF7;
+}
+
+.active {
+    background-color: #482FF7;  
+    border-radius: 4px 4px 0 0;
+}
+
+.passive {
+    color: rgba(15, 11, 48, 0.6);
+}
+
+// ----title, subtitlesi ubheading так само хочу винести в окремий стиль
+.title {
+    font-family: 'Neue Machina bold';
+    font-size: 48px;
+    line-height: 53.76px;
+}
+
+.subtitle {
+    //styleName: Text;
+    font-family: 'Neue Machina regular';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+}
+
+
+.subheading {
+    font-family: 'Neue Machina bold';
+    color: #2D6CDF;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0em;
+}
+
+.regular-text {
+    font-family: 'Neue Machina regular';
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: 0em;
+}
+
+// ----------

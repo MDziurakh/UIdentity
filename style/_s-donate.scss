@@ -1,0 +1,170 @@
+$first-tab-color: #482FF7;
+$second-tab-color: #2D6CDF;
+$third-tab-color: #46C3DB;
+$fourth-tab-color: #0F0B30;
+
+$first-tab-content-bg_color: #F6FCFD;
+$second-tab-content-bg_color: #E7F2F7;
+
+
+.s-donate {
+    padding: 120px 20px 0;
+
+    ._container {
+        min-height: 852px;
+        border: 2px solid #fff;
+        border-radius: 12px;
+        padding: 0 162px;
+        background-color: $first-tab-content-bg_color; // оригінал
+        // background-color: #c7c1ee; // тест
+
+        .donate-top-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 0 0;
+
+            img {
+                padding-bottom: 12px;
+                margin: 0 auto;
+                width: 100%;
+                min-width: 46px;
+                max-width: 111px;
+            }
+
+            h2 {
+                padding: 60px 0;
+            }
+
+            .payment-switch-block {
+                border-bottom: 1px solid $first-tab-color;
+                display: flex;
+                justify-content: space-between;
+
+                .button {
+                    // pointer-events: none;
+
+                    font-family: 'Neue Machina bold';
+                    font-size: 16px;
+                    line-height: 23px;
+                    padding: 16px 0 15px;
+                    text-align: center;
+                    width: 260px;
+                    color: #0F0B3099;
+
+                    &.active {
+                        color: #FFFFFF;
+                    }
+
+                    &.active.first {
+                        background-color: $first-tab-color;
+                    }
+
+                    &.active.second {
+                        background-color: $second-tab-color;
+                    }
+
+                    &.active.third {
+                        background-color: $third-tab-color;
+                    }
+
+                    &.active.fourth {
+                        background-color: $fourth-tab-color;
+                    }
+                }
+            }
+        }
+
+        .payment-details-blocks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            &.first {
+                display: flex;
+                // display: none;
+            }
+
+            &.second {
+                display: flex;
+                display: none;
+            }
+
+            &.third {
+                display: flex;
+                display: none;
+            }
+
+            &.fourth {
+                display: flex;
+                display: none;
+            }
+        }
+
+        .payment-details-block-item {
+            padding-top: 68px;
+            width: 100%;
+            max-width: 502px;
+
+            * {
+                text-align: left;
+            }
+
+            .payment-details-block-title {
+                font-family: 'Neue Machina ultrabold';
+                font-size: 22px;
+                line-height: 29px;
+                padding-bottom: 18px;
+            }
+
+            hr {
+                width: 100%;
+                height: 1px;
+                background: rgba(15, 11, 48, 0.2);
+            }
+
+
+            .payment-details-block-body {
+                padding-top: 24px;
+
+                .copy-button, .link-button {
+                    max-width: 26px;
+                    max-height: 26px;
+                }
+
+                .card-number-bold {
+                    font-family: 'Neue Machina bold';
+                    font-size: 24px;
+                    line-height: 35px;
+                }
+
+                .medium-name-16 {
+                    font-family: 'Neue Machina medium';
+                    font-size: 16px;
+                    line-height: 23px;
+                }
+                .medium-name-18 {
+                    font-family: 'Neue Machina medium';
+                    font-size: 18px;
+                    line-height: 26.28px;
+                }
+
+                .regular-name {
+                    font-family: 'Neue Machina regular';
+                    font-size: 18px;
+                    line-height: 26px;
+
+                    .bold-detail {
+                        font-family: 'Neue Machina bold';
+                        font-size: 18px;
+                    }
+                }
+
+                .payment-detail-copy {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
