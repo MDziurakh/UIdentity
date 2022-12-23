@@ -1,13 +1,24 @@
 @import 'fonts';
-@import 'header';
+// @import 'header';
+@import 'header1';
 @import 's-hero';
 @import 's-video';
 @import 's-icon_boxes';
 @import 's-small-cta';
 @import 's-purpose';
 @import 's-donate';
+@import 's-our-team';
+@import 's-carousel';
+@import 's-faq';
+@import 's-big-cta';
+@import 's-footer';
 
 
+html {
+    scroll-behavior: smooth
+}
+
+;
 
 *,
 *::before,
@@ -59,6 +70,8 @@ body {
 ._container {
     max-width: 1440px;
     margin: 0 auto;
+    // background-color: antiquewhite; 
+    // //////////////////////////////////////////////////////////////////
 }
 
 //-------------- кнопки не знаю куди виносити------
@@ -82,7 +95,7 @@ body {
 }
 
 .active {
-    background-color: #482FF7;  
+    background-color: #482FF7;
     border-radius: 4px 4px 0 0;
 }
 
@@ -90,7 +103,7 @@ body {
     color: rgba(15, 11, 48, 0.6);
 }
 
-// ----title, subtitlesi ubheading так само хочу винести в окремий стиль
+// ----title, subtitle i subheading так само хочу винести в окремий стиль
 .title {
     font-family: 'Neue Machina bold';
     font-size: 48px;
@@ -124,3 +137,51 @@ body {
 }
 
 // ----------
+
+.svg-cont {
+    margin-bottom: 400px;
+    width: 30px;
+    height: 30px;
+    border: 1px dashed #aaa;
+
+    #svg {
+        width: 100%;
+        height: 0;
+        transition: all 0.6s ease;
+        path{
+        }
+        
+        &.show {
+            rotate: 360deg;
+            height: 100%;
+        }
+
+        // @media (max-width:800px) {
+        //     width: 95%;
+        //     height: 55%;
+        // }
+    }
+
+    #non {
+        // display: none;
+        width: 100%;
+        height: 0;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        top: -16px;
+        right: -0px;
+        // width: 50%;
+
+        &.show {
+        rotate: 360deg;
+            height: 100%;
+
+            position: relative;
+            top: -16px;
+            right: -0px;
+
+
+
+        }
+    }
+}

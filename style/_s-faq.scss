@@ -1,0 +1,320 @@
+.s-faq {
+
+    ._container {
+        padding: 100px 120px;
+
+        @media(max-width: 1200px) {
+            padding: 100px 60px;
+        }
+
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        .left-block {
+            max-width: 379px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+
+            * {
+                text-align: left;
+            }
+
+            .title {
+                max-width: 213px;
+            }
+
+            .regular-text {
+                max-width: 379px;
+            }
+        }
+
+        .accordion-block {
+            max-width: 694px;
+            flex: 1;
+
+            * {
+                text-align: left;
+            }
+
+            hr {
+                border-top: 3px solid black;
+            }
+
+            h3 {
+                font-family: 'Neue Machina bold';
+                font-size: 22px;
+                line-height: 29px;
+                padding: 33px 0;
+                display: flex;
+                gap: 20px;
+                align-items: center;
+
+                span {
+                    display: block;
+                    flex: 1;
+                }
+
+                img {
+                    flex: 0;
+                    width: 18px;
+                    height: 18px;
+                    transition: 0.5s;
+                }
+
+                &.active {
+                    img {
+                        transition: 0.5s;
+                        transform: rotate(270deg);
+                    }
+                }
+
+                &.active {
+                    background-color: transparent;
+                    border-radius: 0;
+                }
+            }
+
+            div {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+
+                // padding-bottom: 32px;
+                p {
+                    font-family: 'Neue Machina regular';
+                    font-size: 16px;
+                    line-height: 23px;
+                    padding-bottom: 16px;
+
+                    &.bolder {
+                        font-family: 'Neue Machina bold';
+                    }
+
+                    &:last-child {
+                        padding-bottom: 32px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:980px) {
+
+    .s-faq {
+
+        ._container {
+            @media (max-width:980px) {
+                padding: 80px 40px 80px;
+
+            }
+            @media (max-width:581.98px) {
+                padding: 60px 40px 80px;
+
+            }
+
+            padding: 40px 72px 80px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 40px;
+
+            .left-block {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 22px;
+
+                * {
+                    text-align: left;
+                }
+
+                .title {
+                    max-width: 100%;
+                    font-size: 36px;
+                    line-height: 40px;
+
+                }
+
+                .regular-text {
+                    max-width: 500px;
+                    font-size: 16px;
+                    line-height: 23px;
+
+                }
+            }
+
+            .accordion-block {
+                max-width: 100%;
+                flex: 1;
+
+                * {
+                    text-align: left;
+                }
+
+                hr {
+                    border-top: 3px solid black;
+                }
+
+                h3 {
+                    font-size: 18px;
+                    line-height: 24px;
+
+
+                    span {
+                        display: block;
+                        flex: 1;
+                    }
+
+                    img {
+                        flex: 0;
+                        width: 18px;
+                        height: 18px;
+                        transition: 0.5s;
+                    }
+
+                    &.active {
+                        img {
+                            transition: 0.5s;
+                            transform: rotate(270deg);
+                        }
+                    }
+
+                    &.active {
+                        background-color: transparent;
+                        border-radius: 0;
+                    }
+                }
+
+                div {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+
+                    // padding-bottom: 32px;
+                    p {
+                        font-family: 'Neue Machina regular';
+                        font-size: 16px;
+                        line-height: 23px;
+                        padding-bottom: 16px;
+
+                        &.bolder {
+                            font-family: 'Neue Machina bold';
+                        }
+
+                        &:last-child {
+                            padding-bottom: 32px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:550px) {
+
+    .s-faq {
+
+        ._container {
+            padding: 60px 20px 80px ;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 40px;
+
+            .left-block {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 22px;
+
+                * {
+                    text-align: left;
+                }
+
+                .title {
+                    font-size: 28px;
+                    line-height: 29px;
+
+                }
+
+                .regular-text {
+                    max-width: 277px;
+                    font-size: 14px;
+                    line-height: 20px;
+
+                }
+            }
+
+            .accordion-block {
+                max-width: 100%;
+                flex: 1;
+                * {
+                    text-align: left;
+                }
+                
+                hr {
+                    border-top: 3px solid black;
+                }
+                
+                h3 {
+                    font-size: 16px;
+                    line-height: 21px;
+                    padding: 24px 0;
+
+                    span {
+                        display: block;
+                        flex: 1;
+                    }
+
+                    img {
+                        flex: 0;
+                        width: 18px;
+                        height: 18px;
+                        transition: 0.5s;
+                    }
+
+                    &.active {
+                        img {
+                            transition: 0.5s;
+                            transform: rotate(270deg);
+                        }
+                    }
+
+                    &.active {
+                        background-color: transparent;
+                        border-radius: 0;
+                    }
+                }
+
+                div {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+
+                    // padding-bottom: 32px;
+                    p {
+                        font-family: 'Neue Machina regular';
+                        padding-bottom: 8px;
+                        font-size: 13px;
+                        line-height: 19px;
+
+                        &.bolder {
+                            font-family: 'Neue Machina bold';
+                        }
+
+                        &:last-child {
+                            padding-bottom: 32px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

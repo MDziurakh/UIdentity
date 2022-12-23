@@ -1,0 +1,432 @@
+.s-our-team {
+    background-image: url(/images/s-our-team/background.png);
+    background-size: 966px;
+
+    @media(min-width:1800px) {
+        background-position-x: 100%;
+    }
+
+    background-repeat: no-repeat;
+    background-position-x: 212%;
+    background-position-y: -26%;
+
+    @media(max-width:1210px) {
+        background-position-x: 303%;
+        background-position-y: -27%;
+
+    }
+
+    @media(max-width:1110px) {
+        background-size: 70%;
+        background-position-x: 230%;
+        background-position-y: -22%;
+    }
+
+    ._container {
+        padding: 107px 120px 80px;
+
+        @media(max-width:1110px) {
+            padding: 20px 60px 80px;
+        }
+
+        .text-block {
+            padding-top: 80px;
+
+            @media(max-width:581.98px) {
+                padding-top: 60px;
+            }
+
+            padding-right: 55px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            * {
+                text-align: left;
+            }
+
+            .left-text-block {
+                margin-right: 50px;
+                max-width: 580px;
+
+                h2 {
+                    font-family: 'Neue Machina bold';
+                    font-size: 48px;
+                    line-height: 54px;
+                    padding-bottom: 22px;
+
+                    @media(max-width:1000px) {
+                        font-size: 38px;
+                        line-height: 46px;
+                    }
+                }
+            }
+
+            .right-text-block {
+                max-width: 431px;
+                // padding-right: 55px;
+
+                .top-right-text-block {
+                    font-family: 'Neue Machina bold';
+                    font-size: 24px;
+                    line-height: 33px;
+                    padding-bottom: 32px;
+
+                    @media(max-width:1000px) {
+                        font-size: 20px;
+                        line-height: 30px;
+                        padding-bottom: 12px;
+                    }
+                }
+
+                .bottom-right-text-block {
+                    font-family: 'Neue Machina regular';
+                    font-size: 16px;
+                    line-height: 23px;
+
+                    .bolder {
+                        font-family: 'Neue Machina bold';
+                        font-size: 16px;
+                    }
+                }
+
+            }
+        }
+
+        .photo-block {
+            // border: 1px solid gray;
+
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            .image-label {
+                padding-top: 22px;
+                font-family: 'Neue Machina regular';
+                font-size: 16px;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                .bolder {
+                    font-family: 'Neue Machina bold';
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+            }
+
+            .left-photo-block {
+                padding-top: 230px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .center-photo-block {
+                padding-top: 80px;
+                max-width: 384px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .right-block {
+                img {
+                    width: 100%;
+                    max-width: 170.27px
+                }
+
+                padding-right: 18.47px;
+            }
+        }
+
+        .content-wrapper {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .s-our-team {
+        background-position-x: 233%;
+        background-position-y: -15%;
+
+        ._container {
+            // border: 1px solid gray;
+
+            padding: 27px 72px 40px;
+            
+            @media(max-width:550px) {
+                padding: 0px 72px 40px;
+            }
+                
+
+            .text-block {
+                // border: 1px solid gray;
+                padding-bottom: 53px;
+                padding-right: 0px;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                background: no-repeat;
+                background-position: 97% 100%;
+                background-size: 100px;
+                background-image: url('/images/s-our-team/arrow-icon.png');
+
+                * {
+                    text-align: left;
+                }
+
+                .left-text-block {
+                    margin-right: 50px;
+                    max-width: 100%;
+
+                    h2 {
+                        padding-bottom: 22px;
+                        font-size: 36px;
+                        line-height: 40px;
+                    }
+
+                    .regular-text {
+                        font-size: 16px;
+                        line-height: 23px;
+                        max-width: 87%;
+                    }
+                }
+
+                .right-text-block {
+                    display: none;
+                }
+            }
+
+            // поки нема таблета нічого не придумав
+
+            .photo-block {
+                padding-top: 35px;
+                // border: 1px solid gray;
+
+                display: flex;
+                justify-content: space-between;
+                gap: 35px;
+
+                @media(max-width:630px) {
+                    gap: 25px;
+                }
+
+                .image-label {
+                    padding-top: 12px;
+
+
+                    font-family: 'Neue Machina regular';
+                    font-size: 16px;
+                    line-height: 23px;
+                    letter-spacing: 0em;
+                    text-align: left;
+
+                    .bolder {
+                        font-family: 'Neue Machina bold';
+                        font-size: 18px;
+                        line-height: 26px;
+                    }
+
+                    @media(max-width:630px) {
+                        font-size: 14px;
+                        line-height: 20px;
+
+                        .bolder {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+
+                .left-photo-block {
+                    max-width: 340px;
+                    padding-top: 0px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .center-photo-block {
+                    max-width: 340px;
+                    padding-top: 0px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .right-block {
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
+
+
+@media(max-width:550px) {
+    .s-our-team {
+        background-position-x: 261%;
+        background-position-y: -8%;
+        background-size: 80%;
+
+        ._container {
+            // border: 1px solid gray;
+
+            padding: 0px 60px 40px;
+
+            @media(max-width:480px) {
+                padding: 20px 20px 40px;
+            }
+
+            .text-block {
+                padding-bottom: 100px;
+                padding-right: 0px;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                background: no-repeat;
+                background-position: 7% 94%;
+                background-size: 59px;
+                background-image: url(/images/s-our-team/arrow-icon-reverse.png);
+
+                * {
+                    text-align: left;
+                }
+
+                .left-text-block {
+                    margin-right: 0px;
+                    max-width: 100%;
+
+                    h2 {
+                        padding-bottom: 22px;
+                        font-size: 28px;
+                        line-height: 29px;
+                        max-width: 79%;
+
+                    }
+
+                    .regular-text {
+                        font-size: 16px;
+                        line-height: 23px;
+                        max-width: 87%;
+
+
+                    }
+
+                    @media(max-width:480px) {
+                        h2 {
+                            @media(max-width:370px) {
+                                max-width: 100%;
+                            }
+                        }
+
+                        .regular-text {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+
+                    }
+                }
+
+                .right-text-block {
+                    display: none;
+                }
+            }
+
+            .photo-block {
+                display: none;
+
+            }
+
+            .content-wrapper {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+        }
+
+        .slider-container {
+            overflow: hidden;
+            margin-right: -15px;
+            margin-left: -15px;
+
+            .slider-wrapper {
+                display: block;
+                white-space: nowrap;
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+                margin-bottom: -20px;
+                padding-bottom: 30px;
+                padding-left: 15px;
+
+                .slider-item {
+                    justify-content: center;
+                    align-items: center;
+                    display: inline-block;
+                    border-radius: 5px;
+                    margin-right: 15px;
+                    width: 100%;
+                    max-width: 332px;
+                    max-height: auto;
+
+                    @media(max-width:460px) {
+                        max-width: 300px;
+                    }
+
+                    @media(max-width:360px) {
+                        max-width: 222px;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .image-label {
+                        padding-top: 12px;
+
+
+                        font-family: 'Neue Machina regular';
+                        font-size: 16px;
+                        line-height: 23px;
+                        letter-spacing: 0em;
+                        text-align: left;
+
+                        .bolder {
+                            font-family: 'Neue Machina bold';
+                            font-size: 18px;
+                            line-height: 26px;
+                        }
+
+                        @media(max-width:360px) {
+                            font-size: 14px;
+                            line-height: 20px;
+
+                            .bolder {
+                                font-family: 'Neue Machina bold';
+                                font-size: 16px;
+                                line-height: 23px;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

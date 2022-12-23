@@ -7,64 +7,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+        defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">
 </head>
 
 <body>
     <div class="_wrapper">
         <!-- header starts -->
-        <header class="header">
-            <div class="_container">
-                <div class="header-container ">
-                    <a class="header-logo" href="">
+        <!-- переробити меню //////// -->
+
+        <header>
+            <div id="scroll-to-small" class="_container">
+                <div class="logo-block">
+                    <a class="header-logo" href="#">
                         <img src="images/logo.jpg" alt="logo">
                     </a>
-                    <nav class="menu">
-                        <ul class="menu-list">
-                            <li class="menu-item">
-                                <a class="menu-link" href="#">Наша мета</a>
-                            </li>
-                            <li class="menu-item">
-                                <a class="menu-link" href="#">Активний збір</a>
-                            </li>
-                            <li class="menu-item">
-                                <a class="menu-link" href="#">Реквізити</a>
-                            </li>
-                            <li class="menu-item">
-                                <a class="menu-link" href="#">Про нас</a>
-                            </li>
-                            <li class="menu-item">
-                                <a class="menu-link" href="#">Часті питання</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="right-block">
-                        <div class="lang-switch">
-                            <img src="/images/lang-ua.jpg" alt="ua">
-                        </div>
-                        <a class="button black-button" href="#">Підтримати</a>
+                </div>
+                <ul class="ul-list">
+                    <li class="li-item">
+                        <a class="li-link" href="#s-icon_boxes">Наша мета</a>
+                    </li>
+                    <li class="li-item">
+                        <a class="li-link" href="#small-cta">Активний збір</a>
+                    </li>
+                    <li class="li-item">
+                        <a class="li-link" href="#s-donate">Реквізити</a>
+                    </li>
+                    <li class="li-item">
+                        <a class="li-link" href="#our-team">Про нас</a>
+                    </li>
+                    <li class="li-item">
+                        <a class="li-link" href="#faq">Часті питання</a>
+                    </li>
+                </ul>
+
+                <img class="icon-in-hamburger arrow" src="/images/s-header/yellow-arrow-icon.png"
+                    alt="yellow-arrow-icon">
+                <img class="icon-in-hamburger flower" src="/images/s-header/yellow-flower-icon4.png"
+                    alt="yellow-flower-icon">
+                <div class="lang-switch lang-switch-hamburger">
+                    <img src="/images/lang-ua.jpg" alt="ua">
+                </div>
+                <a class="button black-button" href="#s-donate">Підтримати</a>
+                <!-- <button id="open"></button> -->
+                <img class='open' src="/images/s-header/hamburger-icon-open.png" alt="hamburger-icon-open">
+                <div class="hamburger-menu">
+                    <ul class="ul-list">
+                        <li class="li-item">
+                            <a class="li-link" href="#s-icon_boxes">Наша мета</a>
+                        </li>
+                        <li class="li-item">
+                            <a class="li-link" href="#small-cta">Активний збір</a>
+                        </li>
+                        <li class="li-item">
+                            <a class="li-link" href="#s-donate">Реквізити</a>
+                        </li>
+                        <li class="li-item">
+                            <a class="li-link" href="#our-team">Про нас</a>
+                        </li>
+                        <li class="li-item">
+                            <a class="li-link" href="#faq">Часті питання</a>
+                        </li>
+                    </ul>
+                    <img class="icon-in-hamburger arrow" src="/images/s-header/yellow-arrow-icon.png"
+                        alt="yellow-arrow-icon">
+                    <img class="icon-in-hamburger flower" src="/images/s-header/yellow-flower-icon4.png"
+                        alt="yellow-flower-icon">
+                    <div class="lang-switch lang-switch-hamburger">
+                        <img src="/images/lang-ua.jpg" alt="ua">
                     </div>
+                    <a class="button black-button" href="#s-donate">Підтримати</a>
+                    <!-- <button id="open"></button> -->
+                    <img class='open close' src="/images/s-header/hamburger-icon-close.png" alt="hamburger-icon-open">
                 </div>
             </div>
         </header>
         <!-- header ends -->
-        <!-- hero starts(правильно використав?))) -->
+
+        <!-- hero starts -->
         <section class="s-hero">
             <div class="_container">
-                <div class="s-hero-container">
-                    <h4 class="subheading">Всеукраїнський благодійний фонд “Українська ідентичність”</h4>
-                    <h1>Відкрий українську ідентичність для себе і для світу</h1>
-                    <div class="text">
-                        <p>Зараз нашим завданням є зробити все можливе, щоб ті, хто ризикує своїм життям для нашого з
-                            вами майбутнього, дійсно відчули нашу допомогу, і захистити тих, хто в умовах війни,
-                            найбільше цього потребує.</p>
-                    </div>
-                    <div class="button-block">
-                        <a class="button blue-button" href="#">Активний збір</a>
-                    </div>
+                <h4 class="subheading">Всеукраїнський благодійний фонд “Українська ідентичність”</h4>
+                <h1>Відкрий українську ідентичність для себе і для світу</h1>
+                <div class="text">
+                    <p>Зараз нашим завданням є зробити все можливе, щоб ті, хто ризикує своїм життям для нашого з
+                        вами майбутнього, дійсно відчули нашу допомогу, і захистити тих, хто в умовах війни,
+                        найбільше цього потребує.</p>
+                </div>
+                <div class="button-block">
+                    <a class="button blue-button" href="#small-cta">Активний збір</a>
                 </div>
             </div>
         </section>
         <!-- hero ends -->
+
         <!-- s-video starts -->
         <section class="s-video">
             <div class="_container">
@@ -74,8 +112,9 @@
             </div>
         </section>
         <!-- s-video ends -->
+
         <!-- s-icon_boxes starts -->
-        <section class="s-icon_boxes">
+        <section class="s-icon_boxes" id="s-icon_boxes">
             <div class="_container">
                 <div class="title-block">
                     <h2 class="title">Всеукраїнський благодійний фонд “Українська ідентичність”</h2>
@@ -84,7 +123,6 @@
                 <div class="icon_boxes">
                     <div class="icon-box">
                         <div class="icon">
-                            <!-- центрувати іконцки -->
                             <img src="/images/s-icon_boxes-icons/heart.png" alt="heart-icon">
                         </div>
                         <div class="icon_text-block">
@@ -113,27 +151,39 @@
                 </div>
             </div>
         </section>
-        <!-- s-icon_boxes ends -->
-        <!-- s-small-cta starts -->
         <section class="s-small-cta">
-            <div class="_container">
+            <div class="_container" id="small-cta">
                 <div class="small-cta">
                     <div class="description-block">
                         <h3>Необхідно 20 бронепластин нашим захисникам</h3>
                         <p>Наразі збираємо кошти на керамічні бронепластини <span class="specific-name-bold">SAPI 6
                                 клас. Revision</span></p>
-                        <a class="button blue-button" href="#">Зробити внесок</a>
+                        <a class="button blue-button" href="#s-donate">Зробити внесок</a>
                     </div>
                     <div class="progress-block">
-                        <img src="/images/s-small-cta/progress-circle.png" alt="">
+                        <div class="svg-cont">
+
+                            <h4>Зібрано</h4>
+                            <h2 id="received">19,400</h2>
+                            <h5>з <span id="total-sum">50,000</span></h5>
+                            <svg x="0px" y="0px" viewBox="0 0 397.6 435.3" enable-background="new 0 0 397.6 435.3"
+                                xml:space="preserve" class="svg">
+                                <circle class="circle-bg" cx="198.3" cy="217.3" r="200"
+                                    transform="rotate(270 198.3 217.3)" />
+
+                                <circle class="circle" cx="198.3" cy="217.3" r="200"
+                                    transform="rotate(270 198.3 217.3)" />
+                            </svg>
+                        </div>
+                        <!-- <img src="/images/s-small-cta/progress-circle.png" alt=""> -->
                     </div>
+                    <a class="button blue-button" href="#s-donate">Зробити внесок</a>
                 </div>
             </div>
         </section>
         <!-- s-small-cta ends -->
-        <!-- s-purposes starts -->
 
-        <!-- justify content поправити -->
+        <!-- s-purposes starts -->
         <section class="s-purpose">
             <div class="_container">
                 <div class="purpose-block">
@@ -174,8 +224,9 @@
             </div>
         </section>
         <!-- s-purposes ends -->
+
         <!-- s-donate starts -->
-        <section class="s-donate">
+        <section class="s-donate" id="s-donate">
             <div class="_container">
                 <!-- іконки треба без бекґраунду -->
                 <div class="donate-top-block">
@@ -198,87 +249,112 @@
                                     IdentityFoundation</span></p>
                             <p class="regular-name">Bank: <span class="bold-detail">JSC UNIVERSAL BANK</span></p>
                             <p class="regular-name">Account No.: <span class="bold-detail">26201312762380</span></p>
-                            <div class="payment-detail-copy"><p class="regular-name">IBAN: <span class="bold-detail"> UA903052990000026001026709343</span></p>
-                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg" alt="copy-icon"></button>
+                            <div class="payment-detail-copy">
+                                <p class="regular-name">IBAN: <span class="bold-detail">
+                                        UA903052990000026001026709343</span></p>
+                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                        alt="copy-icon"></button>
                             </div>
                             <p class="regular-name">SWIFT: <span class="bold-detail"> FUIBUA2X</span></p>
                         </div>
                     </div>
                     <div class="payment-details-block-item">
-                        <h3 class="payment-details-block-title">SWIFT in US dollars (USD)</h3>
+                        <h3 class="payment-details-block-title">SWIFT in US euros (EUR)</h3>
                         <hr>
                         <div class="payment-details-block-body">
                             <p class="regular-name">Beneficiary: <span class="bold-detail">Ukrainian
                                     IdentityFoundation</span></p>
                             <p class="regular-name">Bank: <span class="bold-detail">JSC UNIVERSAL BANK</span></p>
-                            <p class="regular-name">Account No.: <span class="bold-detail">26201312762380</span></p>
-                            <div class="payment-detail-copy"><p class="regular-name">IBAN: <span class="bold-detail"> UU903052990000026001026709343</span></p>
-                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg" alt="copy-icon"></button>
+                            <p class="regular-name">Account No.: <span class="bold-detail">26201312762388</span></p>
+                            <div class="payment-detail-copy">
+                                <p class="regular-name">IBAN: <span class="bold-detail">
+                                        UU903052990000026001026709343</span></p>
+                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                        alt="copy-icon"></button>
                             </div>
                             <p class="regular-name">SWIFT: <span class="bold-detail"> FUIBUA2X</span></p>
                         </div>
                     </div>
                 </div>
-
                 <div class="second payment-details-blocks">
                     <div class="payment-details-block-item">
                         <h3 class="payment-details-block-title">Банківські перекази по Україні</h3>
                         <hr>
                         <div class="payment-details-block-body">
-                            <p class="regular-name"><span class="bold-detail">Благодійний фонд “Українська ідентичність”</span></p>
+                            <p class="regular-name"><span class="bold-detail">Благодійний фонд “Українська
+                                    ідентичність”</span></p>
                             <p class="regular-name">ЄДРПОУ: <span class="bold-detail">43720363</span></p>
-                            <p class="regular-name">Призначення платежу: <span class="bold-detail">«Благодійна допомога»</span></p>
-                            
-                            <div class="payment-detail-copy"><p class="regular-name"><span class="bold-detail">UA47 305299 00000 26005026707459</span></p>
-                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg" alt="copy-icon"></button>
-                            </div>    
+                            <p class="regular-name">Призначення платежу: <span class="bold-detail">«Благодійна
+                                    допомога»</span></p>
+
+                            <div class="payment-detail-copy">
+                                <p class="regular-name"><span class="bold-detail">UA47 305299 00000
+                                        26005026707459</span></p>
+                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                        alt="copy-icon"></button>
+                            </div>
                         </div>
                     </div>
                     <div class="payment-details-block-item">
                         <h3 class="payment-details-block-title">Поповнення картки у гривні</h3>
                         <hr>
-                        <div class="payment-details-block-body">  
-                            <div class="payment-detail-copy"><p class="card-number-bold">5168 7420 6353 7207</p>
-                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg" alt="copy-icon"></button>
-                            </div>   
-                            <p class="regular-name">Отримувач: <span class="bold-detail">Благодійний фонд “Українська ідентичність”</span></p>
+                        <div class="payment-details-block-body">
+                            <div class="payment-detail-copy">
+                                <p class="card-number-bold">5168 7420 6353 7207</p>
+                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                        alt="copy-icon"></button>
+                            </div>
+                            <p class="regular-name">Отримувач: <span class="bold-detail">Благодійний фонд “Українська
+                                    ідентичність”</span></p>
                             <p class="regular-name">Рахунок: <span class="bold-detail">26201312762380</span></p>
-                            <div class="payment-detail-copy"><p class="regular-name">IBAN: <span class="bold-detail">UA843052990000026200681993072</span></p>
-                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg" alt="copy-icon"></button>
-                            </div>    
-                            <p class="regular-name">Банк одержувача: <span class="bold-detail">Універсал банк, Київ, Україна</span></p>
+                            <div class="payment-detail-copy">
+                                <p class="regular-name">IBAN: <span
+                                        class="bold-detail">UA843052990000026200681993072</span></p>
+                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                        alt="copy-icon"></button>
+                            </div>
+                            <p class="regular-name">Банк одержувача: <span class="bold-detail">Універсал банк, Київ,
+                                    Україна</span></p>
                             <p class="regular-name">ЄДРПОУ: <span class="bold-detail">43720363</span></p>
                         </div>
                     </div>
                 </div>
-
                 <div class="third payment-details-blocks">
                     <div class="payment-details-block-item">
                         <h3 class="payment-details-block-title">Bitcoin гаманець</h3>
                         <hr>
                         <div class="payment-details-block-body">
-                            <div class="payment-detail-copy"><p class="medium-name">bc1q8wx68f0v54s5whafyfcrc5hv6ad544v7csp03r<span class="bold-detail"></span></p>
-                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg" alt="copy-icon"></button>
-                            </div> 
-                                <!-- скор\піювати все, що треба -->
+                            <div class="payment-detail-copy">
+                                <p class="medium-name">bc1q8wx68f0v54s5whafyfcrc5hv6ad544v7csp03r<span
+                                        class="bold-detail"></span></p>
+                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                        alt="copy-icon"></button>
+                            </div>
+                            <!-- скор\піювати все, що треба -->
                         </div>
                     </div>
                     <div class="payment-details-block-item">
                         <h3 class="payment-details-block-title">ETH</h3>
                         <hr>
                         <div class="payment-details-block-body">
-                            <div class="payment-detail-copy"><p class="medium-name">0xfc0b52E020223c98a546F814cdA6d7872D74b386<span class="bold-detail"></span></p>
-                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg" alt="copy-icon"></button>
-                            </div> 
+                            <div class="payment-detail-copy">
+                                <p class="medium-name">0xfc0b52E020223c98a546F814cdA6d7872D74b386<span
+                                        class="bold-detail"></span></p>
+                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                        alt="copy-icon"></button>
+                            </div>
                         </div>
                     </div>
                     <div class="payment-details-block-item">
                         <h3 class="payment-details-block-title">USDT (TRC20)</h3>
                         <hr>
                         <div class="payment-details-block-body">
-                            <div class="payment-detail-copy"><p class="medium-name-16">TXWij58sQniqy2jtF8QE5xSX2zLQ5YMhUa<span class="bold-detail"></span></p>
-                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg" alt="copy-icon"></button>
-                            </div> 
+                            <div class="payment-detail-copy">
+                                <p class="medium-name-16">TXWij58sQniqy2jtF8QE5xSX2zLQ5YMhUa<span
+                                        class="bold-detail"></span></p>
+                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                        alt="copy-icon"></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -287,18 +363,24 @@
                         <h3 class="payment-details-block-title">PayPal</h3>
                         <hr>
                         <div class="payment-details-block-body">
-                            <div class="payment-detail-copy"><p class="medium-name-18">ukrainianidentity@gmail.com<span class="bold-detail"></span></p>
-                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg" alt="copy-icon"></button>
-                            </div> 
+                            <div class="payment-detail-copy">
+                                <p class="medium-name-18">ukrainianidentity@gmail.com<span class="bold-detail"></span>
+                                </p>
+                                <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                        alt="copy-icon"></button>
+                            </div>
                         </div>
                     </div>
                     <div class="payment-details-block-item">
                         <h3 class="payment-details-block-title">Monobank</h3>
                         <hr>
                         <div class="payment-details-block-body">
-                            <div class="payment-detail-copy"><p class="medium-name-18">Поповнити банку<span class="bold-detail"></span></p>
+                            <div class="payment-detail-copy">
+                                <p class="medium-name-18">Поповнити банку<span class="bold-detail"></span></p>
                                 <!-- не працює нова вкладка -->
-                                <button class="link-button"><a href="https://www.monobank.ua/?lang=uk" target="_blank" rel="noopener noreferrer"><img src="/images/s-donate/link-icon.jpg" alt="link-icon"></a></button>
+                                <button class="link-button"><a href="https://www.monobank.ua/?lang=uk" target="_blank"
+                                        rel="noopener noreferrer"><img src="/images/s-donate/link-icon.jpg"
+                                            alt="link-icon"></a></button>
                             </div>
                         </div>
                     </div>
@@ -307,10 +389,454 @@
 
                 </div> -->
             </div>
+            <div class="_container accordion">
+                <div class="donate-top-block">
+                    <h2 class="title">Допомогти грошима</h2>
+                    <img src="/images/s-donate/money-icon.jpg" alt="money-icon">
+                </div>
+                <div class="payment-switch-block">
+                    <a class="acc-switch first button" href="#"><span>Swift в USD/EUR</span><img
+                            src="/images/s-donate/plus-close.png" alt="plus-close"></a>
+                    <div class="payment-details-blocks">
+                        <div class="payment-details-block-item">
+                            <h3 class="payment-details-block-title">SWIFT in US dollars (USD)</h3>
+                            <hr>
+                            <div class="payment-details-block-body">
+                                <p class="regular-name">Beneficiary: <span class="bold-detail">Ukrainian
+                                        IdentityFoundation</span></p>
+                                <p class="regular-name">Bank: <span class="bold-detail">JSC UNIVERSAL BANK</span>
+                                </p>
+                                <p class="regular-name">Account No.: <span class="bold-detail">26201312762380</span>
+                                </p>
+                                <div class="payment-detail-copy">
+                                    <p class="regular-name">IBAN: <span class="bold-detail">
+                                            UA903052990000026001026709343</span></p>
+                                    <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                            alt="copy-icon"></button>
+                                </div>
+                                <p class="regular-name">SWIFT: <span class="bold-detail"> FUIBUA2X</span></p>
+                            </div>
+                        </div>
+                        <div class="payment-details-block-item">
+                            <h3 class="payment-details-block-title">SWIFT in US euros (EUR)</h3>
+                            <hr>
+                            <div class="payment-details-block-body">
+                                <p class="regular-name">Beneficiary: <span class="bold-detail">Ukrainian
+                                        IdentityFoundation</span></p>
+                                <p class="regular-name">Bank: <span class="bold-detail">JSC UNIVERSAL BANK</span>
+                                </p>
+                                <p class="regular-name">Account No.: <span class="bold-detail">26201312762380</span>
+                                </p>
+                                <div class="payment-detail-copy">
+                                    <p class="regular-name">IBAN: <span class="bold-detail">
+                                            UU903052990000026001026709343</span></p>
+                                    <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                            alt="copy-icon"></button>
+                                </div>
+                                <p class="regular-name">SWIFT: <span class="bold-detail"> FUIBUA2X</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="acc-switch second button" href="#"><span>Перекази по Україні</span><img
+                            src="/images/s-donate/plus-close.png" alt="plus-close"></a>
+                    <div class="payment-details-blocks">
+                        <div class="payment-details-block-item">
+                            <h3 class="payment-details-block-title">Банківські перекази по Україні</h3>
+                            <hr>
+                            <div class="payment-details-block-body">
+                                <p class="regular-name"><span class="bold-detail">Благодійний фонд “Українська
+                                        ідентичність”</span></p>
+                                <p class="regular-name">ЄДРПОУ: <span class="bold-detail">43720363</span></p>
+                                <p class="regular-name">Призначення платежу: <span class="bold-detail">«Благодійна
+                                        допомога»</span></p>
+
+                                <div class="payment-detail-copy">
+                                    <p class="regular-name"><span class="bold-detail">UA47 305299 00000
+                                            26005026707459</span></p>
+                                    <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                            alt="copy-icon"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-details-block-item">
+                            <h3 class="payment-details-block-title">Поповнення картки у гривні</h3>
+                            <hr>
+                            <div class="payment-details-block-body">
+                                <div class="payment-detail-copy">
+                                    <p class="card-number-bold">5168 7420 6353 7207</p>
+                                    <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                            alt="copy-icon"></button>
+                                </div>
+                                <p class="regular-name">Отримувач: <span class="bold-detail">Благодійний фонд
+                                        “Українська
+                                        ідентичність”</span></p>
+                                <p class="regular-name">Рахунок: <span class="bold-detail">26201312762380</span></p>
+                                <div class="payment-detail-copy">
+                                    <p class="regular-name">IBAN: <span
+                                            class="bold-detail">UA843052990000026200681993072</span></p>
+                                    <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                            alt="copy-icon"></button>
+                                </div>
+                                <p class="regular-name">Банк одержувача: <span class="bold-detail">Універсал банк,
+                                        Київ,
+                                        Україна</span></p>
+                                <p class="regular-name">ЄДРПОУ: <span class="bold-detail">43720363</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="acc-switch third button" href="#"><span>Криптовалюта</span><img
+                            src="/images/s-donate/plus-close.png" alt="plus-close"></a>
+                    <div class="payment-details-blocks">
+                        <div class="payment-details-block-item">
+                            <h3 class="payment-details-block-title">Bitcoin гаманець</h3>
+                            <hr>
+                            <div class="payment-details-block-body">
+                                <div class="payment-detail-copy">
+                                    <p class="medium-name">bc1q8wx68f0v54s5whafyfcrc5hv6ad544v7csp03r<span
+                                            class="bold-detail"></span></p>
+                                    <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                            alt="copy-icon"></button>
+                                </div>
+                                <!-- скор\піювати все, що треба -->
+                            </div>
+                        </div>
+                        <div class="payment-details-block-item">
+                            <h3 class="payment-details-block-title">ETH</h3>
+                            <hr>
+                            <div class="payment-details-block-body">
+                                <div class="payment-detail-copy">
+                                    <p class="medium-name">0xfc0b52E020223c98a546F814cdA6d7872D74b386<span
+                                            class="bold-detail"></span></p>
+                                    <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                            alt="copy-icon"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-details-block-item">
+                            <h3 class="payment-details-block-title">USDT (TRC20)</h3>
+                            <hr>
+                            <div class="payment-details-block-body">
+                                <div class="payment-detail-copy">
+                                    <p class="medium-name-16">TXWij58sQniqy2jtF8QE5xSX2zLQ5YMhUa<span
+                                            class="bold-detail"></span></p>
+                                    <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                            alt="copy-icon"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="acc-switch fourth button" href="#"><span>PayPal/Patreon</span><img
+                            src="/images/s-donate/plus-close.png" alt="plus-close"></a>
+                    <div class="payment-details-blocks">
+                        <div class="payment-details-block-item">
+                            <h3 class="payment-details-block-title">PayPal</h3>
+                            <hr>
+                            <div class="payment-details-block-body">
+                                <div class="payment-detail-copy">
+                                    <p class="medium-name-18">ukrainianidentity@gmail.com<span
+                                            class="bold-detail"></span>
+                                    </p>
+                                    <button class="copy-button"><img src="/images/s-donate/copy-icon.jpg"
+                                            alt="copy-icon"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-details-block-item">
+                            <h3 class="payment-details-block-title">Monobank</h3>
+                            <hr>
+                            <div class="payment-details-block-body">
+                                <div class="payment-detail-copy">
+                                    <p class="medium-name-18">Поповнити банку<span class="bold-detail"></span></p>
+                                    <!-- не працює нова вкладка -->
+                                    <button class="link-button"><a href="https://www.monobank.ua/?lang=uk"
+                                            target="_blank" rel="noopener noreferrer"><img
+                                                src="/images/s-donate/link-icon.jpg" alt="link-icon"></a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- кнопки -->
+                </div>
+            </div>
         </section>
         <!-- s-donate ends -->
 
+        <!-- s-our-team starts -->
+        <section class="s-our-team">
+            <div class="_container">
+                <div class="text-block" id="our-team">
+
+                    <div class="left-text-block">
+                        <h2>Познайомтеся з нашою командою</h2>
+                        <p class="regular-text">Ми зібрали людей, які допомагають та ризикують своїм життям незважаючи
+                            ні на що. Додамо
+                            мінімально тексту про те, коли було фонд засновано, адже я вважаю, що поки можна не додавати
+                            окрему секцію
+                        </p>
+                    </div>
+
+                    <div class="right-text-block">
+                        <p class="top-right-text-block">
+                            “Цитата засновника фонду Українська ідентичність - для того, щоб зробити фонд більш живим та
+                            близьким для людей”
+                        </p>
+                        <p class="bottom-right-text-block">
+                            <span class="bolder">Андрій,</span> засновник та директор фонду
+                        </p>
+                    </div>
+                </div>
+                <div class="photo-block">
+                    <div class="left-photo-block">
+                        <img src="/images/s-our-team/left-foto.jpg" alt="left-photo">
+                        <p class="image-label"><span class="bolder">Андрій,</span><br> засновник фонду</p>
+                    </div>
+                    <div class="center-photo-block">
+                        <img src="/images/s-our-team/center-photo.jpg" alt="center-photo">
+                        <p class="image-label"><span class="bolder">Андрій,</span><br> співзасновник фонду</p>
+                    </div>
+                    <div class="right-block">
+                        <img src="/images/s-our-team/arrow-icon.png" alt="arrow-icon">
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <div class="slider-container">
+                        <div class="slider-wrapper">
+                            <div class="slider-item">
+                                <img src="/images/s-our-team/left-foto.jpg" alt="left-photo">
+                                <p class="image-label"><span class="bolder">Андрій,</span><br> засновник фонду</p>
+                            </div>
+                            <div class="slider-item">
+                                <img src="/images/s-our-team/center-photo.jpg" alt="center-photo">
+                                <p class="image-label"><span class="bolder">Андрій,</span><br> співзасновник фонду</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- s-our-team ends -->
+
+        <!-- s-carousel starts -->
+        <section class="s-carousel">
+
+            <div class="_container">
+                <div class="carousel">
+
+                    <div class="carousel__slider">
+                        <ul class="carousel__list">
+                            <li class="carousel__item">
+                                <img src="/images/s-carousel/blue-house-logo.png" alt="">
+                            </li>
+                            <li class="carousel__item">
+                                <img src="/images/s-carousel/paper-airplane-toy.png" alt="">
+                            </li>
+                            <li class="carousel__item">
+                                <img src="/images/s-carousel/blue-house-logo.png" alt="">
+                            </li>
+                            <li class="carousel__item">
+                                <img src="/images/s-carousel/paper-airplane-toy.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- s-carousel ends -->
+
+        <!-- s-faq starts -->
+        <section class="s-faq">
+            <div class="_container" id="faq">
+                <div class="left-block">
+                    <h2 class="title">Часті питання</h2>
+                    <p class="regular-text">Отримайте швидкі відповіді на найактуальніші запитання про фонд “Українська
+                        ідентичність”.</p>
+                </div>
+                <div class="accordion-block">
+                    <hr>
+                    <h3 class="acc-switch">
+                        <span>Кому допомагає фонд “Українська ідентичність”?</span>
+                        <img src="/images/s-faq/plus.png" alt="plus-close">
+                    </h3>
+                    <div>
+                        <p class="bolder">Наші пріоритети:</p>
+                        <p>Засоби спостереження і розвідки (тепловізори, прилади нічного бачення, квадрокоптери,
+                            приціли);</p>
+                        <p>Системи коригування артилерії; Мобільність підрозділів (“Пекельні тачки”);</p>
+                        <p>Бронежилети і каски;</p>
+                    </div>
+
+                    <hr>
+                    <h3 class="acc-switch">
+                        <span>Із ким ми співпрацюємо?</span>
+                        <img src="/images/s-faq/plus.png" alt="plus-close">
+                    </h3>
+                    <div>
+                        <p class="bolder">Наші пріоритети:</p>
+                        <p>Засоби спостереження і розвідки (тепловізори, прилади нічного бачення, квадрокоптери,
+                            приціли);</p>
+                        <p>Системи коригування артилерії; Мобільність підрозділів (“Пекельні тачки”);</p>
+                        <p>Бронежилети і каски;</p>
+                    </div>
+
+                    <hr>
+                    <h3 class="acc-switch">
+                        <span>На що фонд першочергово витрачає гроші?</span>
+                        <img src="/images/s-faq/plus.png" alt="plus-close">
+                    </h3>
+                    <div>
+                        <p class="bolder">Наші пріоритети:</p>
+                        <p>Засоби спостереження і розвідки (тепловізори, прилади нічного бачення, квадрокоптери,
+                            приціли);</p>
+                        <p>Системи коригування артилерії; Мобільність підрозділів (“Пекельні тачки”);</p>
+                        <p>Бронежилети і каски;</p>
+                    </div>
+
+                    <hr>
+                    <h3 class="acc-switch">
+                        <span>На що фонд другочергово витрачає гроші?</span>
+                        <img src="/images/s-faq/plus.png" alt="plus-close">
+                    </h3>
+                    <div>
+                        <p class="bolder">Наші пріоритети:</p>
+                        <p>Засоби спостереження і розвідки (тепловізори, прилади нічного бачення, квадрокоптери,
+                            приціли);</p>
+                        <p>Системи коригування артилерії; Мобільність підрозділів (“Пекельні тачки”);</p>
+                        <p>Бронежилети і каски;</p>
+                    </div>
+                    <hr>
+
+                </div>
+            </div>
+        </section>
+        <!-- s-faq ends -->
+
+        <!-- s-big-cta starts -->
+        <section class="s-big-cta">
+            <div class="_container">
+                <div class="big-cta">
+                    <h1 class="main-title">
+                        разом ми сильні
+                    </h1>
+                    <p class="regular-text">
+                        У зборах коштів важлива кожна гривня, тому долучайтеся до допомоги нашим захисникам і ми
+                        наблизимо перемогу разом
+                    </p>
+                    <a class="button black-button" href="#">Зробити внесок</a>
+                </div>
+            </div>
+        </section>
+        <!-- s-big-cta ends -->
+
+        <!-- s-footer starts -->
+        <footer class="s-footer">
+            <div class="_container">
+                <div class="footer">
+                    <div class="top-block">
+
+                        <div class="logo">
+                            <img src="/images/logo.jpg" alt="logo">
+                        </div>
+                        <div class="nav">
+                            <a href="#s-icon_boxes">Наша мета</a>
+                            <a href="#small-cta">Активний збір</a>
+                            <a href="#s-donate">Реквізити</a>
+                            <a href="#our-team">Про нас</a>
+                            <a href="#faq">Часті питання</a>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://www.instagram.com/">Instagram</a>
+                            <a href="https://www.facebook.com/">Facebook</a>
+                            <a href="https://twitter.com/">Twitter</a>
+                        </div>
+                    </div>
+
+                    <div class="bottom-block">
+                        <span>© 2022. Всі права захищені</span>
+                        <span class="underline">Terms & Conditions</span>
+                        <span class="underline">Privacy Policy</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- s-footer ends -->
+
     </div>
+
+
+    <!-- <svg width="50" height="50">
+        <path d="m 0 0 q0 0 10 0"
+        fill="none" 
+        stroke="red"
+        stroke-width="5"
+        ></path>
+    </svg> -->
+
+    <!-- <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 10 C 10 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/>
+      </svg>
+      <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"> -->
+
+    <!-- <path d="M10 10 H 20 V 970 H 10 L 10 10"/> -->
+
+    <!-- Точки -->
+    <!-- <circle cx="10" cy="10" r="2" fill="red"/>
+        <circle cx="90" cy="90" r="2" fill="red"/>
+        <circle cx="90" cy="10" r="2" fill="red"/>
+        <circle cx="10" cy="90" r="2" fill="red"/> -->
+
+    <!-- </svg> -->
+
+
+    <!-- M - Переместиться к -->
+    <!-- L - Лінія до -->
+    <!-- H - горизонтальна Лінія до -->
+    <!-- V - вертикальна Лінія до -->
+    <!-- Z - закрити шлях -->
+    <div class="_container">
+        <div class="svg-cont">
+            <svg class="show" id='svg' viewBox="0 0 30 30" fill="none" stroke="black">
+                <path id="fi" class="show" d='M1 6,
+           C14 -5, 20 10, 28 3,
+           C29 3, 30 7, 30 7,
+           C22 10, 15 1, 2 8,
+           C1 8, 1 6, 1 6'>
+
+                </path>
+                <path id="se" class="show" d='M1 13,
+           C14 2, 20 17, 28 10,
+           C29 10, 30 14, 30 14,
+           C22 17, 15 8, 2 15,
+           C1 15, 1 13, 1 13'>
+
+                </path>
+                <path id="th" class="show" d='M1 20,
+           C14 9, 20 24, 28 17,
+           C29 17, 30 21, 30 21,
+           C22 24, 15 15, 2 22,
+           C1 22, 1 20, 1 20'>
+                </path>
+            </svg>
+            <svg id="non" viewBox="0 0 30 30" fill="none" stroke="blue">
+
+                <path d='M6 1, 
+                      L16 10,
+                         L 25 1,
+                         L30 4,
+                         L20 14,
+                         L30 24,
+                         L26 28,
+                         L16 18,
+                         L7 28,
+                         L2 24,
+                         L12 14,
+                         L2 5, z
+                         '>
+
+                </path>
+            </svg>
+        </div>
+    </div>
+
     <script src="/index.js"></script>
 </body>
 
