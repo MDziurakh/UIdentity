@@ -86,11 +86,13 @@
 
         ._container {
             padding: 20px 20px;
+
             .subheading {
                 max-width: 468px;
             }
 
             h1 {
+                max-width: 505px;
                 font-size: 40px;
                 line-height: 42px;
 
@@ -104,7 +106,7 @@
     .s-hero {
         ._container {
             h1 {
-                max-width: 318px;
+                max-width: 508px;
                 background-size: 25px, 30px;
             }
 
@@ -120,7 +122,7 @@
     }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 496px) {
     .s-hero {
         ._container {
             .subheading {
@@ -129,7 +131,10 @@
             }
 
             h1 {
-                max-width: 299px;
+                // max-width: 299px;
+                font-size: 34px;
+                line-height: 40px;
+                max-width: 414px;
             }
 
             p {
@@ -140,11 +145,13 @@
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
     .s-hero {
         ._container {
             padding: 20px 10px;
+
             h1 {
+                max-width: 335px;
                 font-size: 24px;
                 line-height: 33px;
             }

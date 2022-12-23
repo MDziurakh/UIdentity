@@ -20,7 +20,7 @@ header {
     }
 
     ._container {
-        transition: 0.4s;
+        // transition: 0.4s all ease;
         padding: 60px 40px 0 40px;
         display: grid;
         align-items: center;
@@ -64,7 +64,7 @@ header {
                     line-height: 14px;
                     letter-spacing: -0.02em;
                     text-align: center;
-                    
+
                     @media(max-width:1160px) {
                         font-size: 14px;
                     }
@@ -129,7 +129,7 @@ header {
 
         // backsmaller-pdground-color: rgba(255, 255, 255, 0.44) !important;
         ._container {
-            transition: all 0.5s ease;
+            // transition: all 0.5s ease;
             padding: 30px 40px 0 40px !important;
             grid-template-areas: 'logo open';
 
@@ -161,22 +161,47 @@ header {
             }
 
             .hamburger-menu {
-                transition:all 0.4s ease;
+                // transition: all 0.4s ease;
                 display: grid;
-
                 position: fixed;
                 top: 0;
                 right: 0;
-                height: 0;
                 overflow-y: scroll;
-                max-height: 100%;
-                width: 0;
+                // max-height: 100%;
+                
+                position: fixed;
+                top: 0;
+                right: -365px;
+                background-color: #482FF7;
+
+                grid-template-areas: 'lang close'
+                    'flower flower'
+                    'ul-list ul-list'
+                    'arrow arrow'
+                    'button button';
+                place-items: center;
+                padding: 31px 40px 70px;
+
+                transition: right 1s ease;
+                height: auto;
+                width: auto;
+                
+
+
+
             }
+
+
+
+// переробити з картинки на svg, переробити функціонал
+
+
 
             &.active-menu {
 
                 display: grid;
                 grid-template-areas: 'logo hamburger-menu';
+                transition: all 0.8s ease;
 
                 .logo-block {
                     grid-area: logo;
@@ -229,7 +254,8 @@ header {
                     place-items: center;
                     padding: 31px 40px 70px;
 
-                    transition: 0.4s;
+                    // transition: 0.4s;
+                    transition: all 0.4s ease;
                     height: auto;
                     width: auto;
 

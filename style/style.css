@@ -107,12 +107,13 @@ header.bg-header {
 }
 header #scroll-to-small {
   padding: 60px 40px 0 40px;
+  position: relative;
+  z-index: -2;
 }
 header #scroll-to-small.smaller-pd {
   padding: 20px 40px 0 40px;
 }
 header ._container {
-  transition: 0.4s;
   padding: 60px 40px 0 40px;
   display: grid;
   align-items: center;
@@ -163,6 +164,9 @@ header ._container .ul-list .li-item :hover {
   font-size: 15px;
   font-weight: 700;
 }
+header ._container .svg-cont {
+  display: none;
+}
 header ._container .arrow {
   display: none;
   grid-area: arrow;
@@ -205,9 +209,11 @@ header ._container .hamburger-menu {
 
 @media (max-width: 991.98px) {
   header ._container {
-    transition: all 0.5s ease;
     padding: 30px 40px 0 40px !important;
-    grid-template-areas: "logo open";
+    display: grid;
+    grid-template-areas: "logo svg hamburger-menu";
+    grid-auto-columns: 4fr 40px 0.2fr;
+    transition: all 0.8s ease;
   }
   header ._container .logo-block {
     width: 147px;
@@ -218,75 +224,142 @@ header ._container .hamburger-menu {
   header ._container .lang-switch {
     display: none;
   }
-  header ._container .button {
+  header ._container .button.black-button {
     display: none;
   }
   header ._container .open {
-    grid-area: open;
-    display: block;
-    place-self: end;
-    align-self: center;
+    display: none;
   }
   header ._container .close {
     display: none;
   }
+  header ._container .svg-cont {
+    display: block;
+    grid-area: svg;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    right: -44px;
+    z-index: 20;
+  }
+}
+@media (max-width: 991.98px) and (max-width: 870px) {
+  header ._container .svg-cont {
+    right: -36px;
+  }
+}
+@media (max-width: 991.98px) {
+  header ._container .svg-cont #svg {
+    width: 100%;
+    height: 0;
+    transition: all 0.3s ease;
+  }
+  header ._container .svg-cont #svg.show {
+    rotate: 360deg;
+    height: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  header ._container .svg-cont #non {
+    width: 100%;
+    height: 0;
+    transition: all 0.5s ease-in-out;
+    rotate: 360deg;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+  header ._container .svg-cont #non.show {
+    rotate: 360deg;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+}
+@media (max-width: 991.98px) {
   header ._container .hamburger-menu {
-    transition: all 0.4s ease;
+    z-index: -1;
     display: grid;
     position: fixed;
     top: 0;
-    right: 0;
-    height: 0;
+    right: -365px;
     overflow-y: scroll;
     max-height: 100%;
-    width: 0;
+    background-color: #482FF7;
+    grid-template-areas: "lang non" "flower flower" "ul-list ul-list" "arrow arrow" "button button";
+    place-items: center;
+    padding: 31px 40px 70px;
+    transition: right 0.4s ease;
+    height: 100vh;
+    width: auto;
   }
-  header ._container.active-menu {
-    display: grid;
-    grid-template-areas: "logo hamburger-menu";
+  header ._container .hamburger-menu .lang-switch {
+    place-self: start;
+    display: block;
+    margin-right: 0;
   }
-  header ._container.active-menu .logo-block {
-    grid-area: logo;
-  }
-  header ._container.active-menu .ul-list {
-    grid-area: ul-list;
-  }
-  header ._container.active-menu .arrow {
-    grid-area: arrow;
-  }
-  header ._container.active-menu .flower {
-    grid-area: flower;
-  }
-  header ._container.active-menu .lang-switch {
-    grid-area: lang;
-    margin-right: 44px;
-  }
-  header ._container.active-menu .lang-switch img {
+  header ._container .hamburger-menu .lang-switch img {
     border: 1px solid #D6D6D7;
     border-radius: 2px;
     padding: 0px 25px 0px 7px;
   }
-  header ._container.active-menu .button {
-    grid-area: button;
+  header ._container .hamburger-menu .svg-cont {
+    grid-area: non;
+    right: -44px;
   }
-  header ._container.active-menu .open {
+  header ._container .hamburger-menu .button {
+    grid-area: button;
+    display: block;
+    width: 275px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 991.98px) {
+  header ._container .logo-block {
+    grid-area: logo;
+  }
+}
+@media (max-width: 991.98px) {
+  header ._container .ul-list {
+    grid-area: ul-list;
+  }
+}
+@media (max-width: 991.98px) {
+  header ._container .arrow {
+    grid-area: arrow;
+  }
+}
+@media (max-width: 991.98px) {
+  header ._container .flower {
+    grid-area: flower;
+  }
+}
+@media (max-width: 991.98px) {
+  header ._container .lang-switch {
+    grid-area: lang;
+    margin-right: 44px;
+  }
+  header ._container .lang-switch img {
+    border: 1px solid #D6D6D7;
+    border-radius: 2px;
+    padding: 0px 25px 0px 7px;
+  }
+}
+@media (max-width: 991.98px) {
+  header ._container .open {
     display: none;
   }
-  header ._container.active-menu .hamburger-menu {
-    grid-area: hamburger-menu;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #482FF7;
-    display: grid;
-    grid-template-areas: "lang close" "flower flower" "ul-list ul-list" "arrow arrow" "button button";
-    place-items: center;
-    padding: 31px 40px 70px;
-    transition: 0.4s;
-    height: auto;
-    width: auto;
+}
+@media (max-width: 991.98px) {
+  header ._container .ul-list.big {
+    display: none;
   }
-  header ._container.active-menu .hamburger-menu .ul-list {
+}
+@media (max-width: 991.98px) {
+  header ._container .ul-list {
     grid-area: ul-list;
     display: grid;
     grid-template-columns: 1fr;
@@ -295,7 +368,7 @@ header ._container .hamburger-menu {
     width: 100%;
     height: auto;
   }
-  header ._container.active-menu .hamburger-menu .ul-list .li-item {
+  header ._container .ul-list .li-item {
     height: 100%;
     width: 100%;
     min-height: 50px;
@@ -303,7 +376,7 @@ header ._container .hamburger-menu {
     justify-content: center;
     align-items: center;
   }
-  header ._container.active-menu .hamburger-menu .ul-list .li-item .li-link {
+  header ._container .ul-list .li-item .li-link {
     padding: 17px 0;
     width: 100%;
     color: #0F0B30;
@@ -313,62 +386,115 @@ header ._container .hamburger-menu {
     letter-spacing: -0.02em;
     text-align: center;
   }
-  header ._container.active-menu .hamburger-menu .ul-list .li-item :hover {
+  header ._container .ul-list .li-item :hover {
     transition: 0.5s;
     font-size: 15px;
     font-weight: 700;
   }
-  header ._container.active-menu .hamburger-menu .arrow {
+}
+@media (max-width: 991.98px) {
+  header ._container .arrow {
     display: block;
     grid-area: arrow;
     padding: 40px 0;
   }
-  header ._container.active-menu .hamburger-menu .flower {
+}
+@media (max-width: 991.98px) {
+  header ._container .flower {
     display: block;
     grid-area: flower;
   }
-  header ._container.active-menu .hamburger-menu .lang-switch {
-    place-self: start;
-    display: block;
-    margin-right: 0;
-  }
-  header ._container.active-menu .hamburger-menu .lang-switch img {
-    border: 1px solid #D6D6D7;
-    border-radius: 2px;
-    padding: 0px 25px 0px 7px;
-  }
-  header ._container.active-menu .hamburger-menu .button {
-    display: block;
-    width: 275px;
-    text-align: center;
-    margin: 0 auto;
-  }
-  header ._container.active-menu .hamburger-menu .close {
+}
+@media (max-width: 991.98px) {
+  header ._container .close {
     grid-area: close;
-    display: block;
     place-self: end;
     align-self: center;
   }
 }
 @media (max-width: 582px) {
-  header ._container {
-    padding: 20px 24px 0 !important;
-  }
   header ._container .logo-block {
     width: 111px;
+    z-index: -1;
   }
   header ._container .open {
     width: 22px;
   }
-  header ._container.active-menu .hamburger-menu {
-    padding: 20px 24px;
-    width: 100%;
+  header ._container .svg-cont {
+    right: -24px;
   }
-  header ._container.active-menu .hamburger-menu .arrow {
+}
+@media (max-width: 582px) and (max-width: 508px) {
+  header ._container .svg-cont {
+    right: -31px;
+  }
+}
+@media (max-width: 582px) {
+  header ._container .hamburger-menu .arrow {
     padding: 20px 0;
   }
-  header ._container.active-menu .hamburger-menu .flower {
+  header ._container .hamburger-menu .flower {
     height: 86px;
+  }
+}
+@media (max-width: 582px) {
+  header ._container .hamburger-menu {
+    padding: 30px 24px 70px !important;
+    z-index: -1;
+    display: grid;
+    position: fixed;
+    top: 0;
+    right: -582px;
+    overflow-y: scroll;
+    max-height: 100%;
+    background-color: #482FF7;
+    grid-template-areas: "lang non" "flower flower" "ul-list ul-list" "arrow arrow" "button button";
+    place-items: center;
+    padding: 31px 40px 70px;
+    transition: right 0.4s ease;
+    height: 100vh;
+    width: 100%;
+  }
+  header ._container .hamburger-menu .svg-cont {
+    right: -24px;
+  }
+  header ._container .hamburger-menu .lang-switch {
+    place-self: start;
+    display: block;
+    margin-right: 0;
+  }
+  header ._container .hamburger-menu .lang-switch img {
+    border: 1px solid #D6D6D7;
+    border-radius: 2px;
+    padding: 0px 25px 0px 7px;
+  }
+  header ._container .hamburger-menu .svg-cont {
+    grid-area: non;
+    right: -80px;
+  }
+}
+@media (max-width: 582px) and (max-width: 508px) {
+  header ._container .hamburger-menu .svg-cont {
+    right: -70px;
+  }
+}
+@media (max-width: 582px) and (max-width: 444px) {
+  header ._container .hamburger-menu .svg-cont {
+    right: -52px;
+  }
+}
+@media (max-width: 582px) and (max-width: 374px) {
+  header ._container .hamburger-menu .svg-cont {
+    right: -32px;
+  }
+}
+@media (max-width: 582px) {
+  header ._container .hamburger-menu .button {
+    grid-area: button;
+    display: block;
+    width: 275px;
+    text-align: center;
+    margin: 0 auto;
   }
 }
 .s-hero {
@@ -452,13 +578,14 @@ header ._container .hamburger-menu {
     max-width: 468px;
   }
   .s-hero ._container h1 {
+    max-width: 505px;
     font-size: 40px;
     line-height: 42px;
   }
 }
 @media (max-width: 582px) {
   .s-hero ._container h1 {
-    max-width: 318px;
+    max-width: 508px;
     background-size: 25px, 30px;
   }
   .s-hero ._container .button-block a {
@@ -468,24 +595,27 @@ header ._container .hamburger-menu {
     line-height: 15.44px;
   }
 }
-@media (max-width: 560px) {
+@media (max-width: 496px) {
   .s-hero ._container .subheading {
     font-size: 16px;
     line-height: 23px;
   }
   .s-hero ._container h1 {
-    max-width: 299px;
+    font-size: 34px;
+    line-height: 40px;
+    max-width: 414px;
   }
   .s-hero ._container p {
     font-size: 14px;
     line-height: 20px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .s-hero ._container {
     padding: 20px 10px;
   }
   .s-hero ._container h1 {
+    max-width: 335px;
     font-size: 24px;
     line-height: 33px;
   }
@@ -3108,21 +3238,21 @@ body {
 }
 
 .svg-cont {
-  margin-bottom: 400px;
   width: 30px;
   height: 30px;
-  border: 1px dashed #aaa;
 }
-.svg-cont #svg {
+
+#svg {
   width: 100%;
   height: 0;
   transition: all 0.6s ease;
 }
-.svg-cont #svg.show {
+#svg.show {
   rotate: 360deg;
   height: 100%;
 }
-.svg-cont #non {
+
+#non {
   width: 100%;
   height: 0;
   transition: all 0.5s ease-in-out;
@@ -3130,7 +3260,7 @@ body {
   top: -16px;
   right: 0px;
 }
-.svg-cont #non.show {
+#non.show {
   rotate: 360deg;
   height: 100%;
   position: relative;

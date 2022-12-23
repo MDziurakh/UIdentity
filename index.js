@@ -6,12 +6,13 @@ let sDonateContainer = document.querySelector(".s-donate ._container");
 let menu = document.querySelector("header ._container");
 let header = document.querySelector("header");
 
-let opener = document.querySelectorAll(".open");
-opener.forEach((item) => {
-  item.addEventListener("click", () => {
-    menu.classList.toggle("active-menu");
-  });
-});
+  // let opener = document.querySelectorAll(".open");
+  // opener.forEach((item) => {
+  //   item.addEventListener("click", () => {
+  //     menu.classList.toggle("active-menu");
+  //   });
+  // });
+
 
 // перемикач табів
 buttons.forEach((button) =>
@@ -238,16 +239,31 @@ carousel();
 
 // //////////////// закривання меню
 
+let hamMenu = document.querySelector('.hamburger-menu');
+let hamStyle = window.getComputedStyle(hamMenu)
+
+let hamburgerWidth =  hamStyle.width;
+// console.log(hamburgerWidth.length);
+// console.log(hamburgerWidth.substring(0, hamburgerWidth.length - 2));
+let widthToRight = '-' + (+hamburgerWidth.substring(0, +hamburgerWidth.length - 2) + 50).toFixed()+'px';
+// console.log(widthToRight); 
 document.addEventListener("click", (e) => {
+  // console.dir(e.target)
   if (
-    menu.classList.contains("active-menu") &&
+    // menu.classList.contains("active-menu") &&
     !e.target.classList.contains("hamburger-menu") &&
     !e.target.classList.contains("open") &&
-    e.target.localName !== "img" &&
+    e.target.alt !== 'ua' &&
+    !e.target.classList.contains("lang-switch") &&
+    !e.target.localName !== "img" &&
     !e.target.classList.contains("icon-in-hamburger") &&
     !e.target.classList.contains("lang-switch")
   ) {
-    menu.classList.remove("active-menu");
+    if(hamStyle.right == '0px'){
+      b.classList.remove("show");
+      a.classList.add("show");
+      hamMenu.style.right = widthToRight;
+     }
   }
 });
 
@@ -256,10 +272,31 @@ document.addEventListener("click", (e) => {
 let a = document.querySelector("#svg");
 let b = document.querySelector("#non");
 a.addEventListener("click", () => {
-  b.classList.toggle("show");
-  a.classList.toggle("show");
+  if(hamStyle.right == '0px'){
+    a.classList.remove("show");
+    b.classList.add("show");
+    hamMenu.style.right = widthToRight
+    // console.log(hamStyle.right);
+  }
+  else if(hamStyle.right !== '0px'){
+    a.classList.remove("show");
+    b.classList.add("show");
+    hamMenu.style.right = '0px'
+    // console.log(hamStyle.right);
+  }
+
 });
 b.addEventListener("click", () => {
-  a.classList.toggle("show");
-  b.classList.toggle("show");
+  if(hamStyle.right == '0px'){
+    a.classList.add("show");
+    b.classList.remove("show");
+    hamMenu.style.right = widthToRight
+    // console.log(hamStyle.right);
+  }
+  else if(hamStyle.right !== '0px'){
+    a.classList.add("show");
+    b.classList.remove("show");
+    hamMenu.style.right = '0px'
+    // console.log(hamStyle.right);
+  }
 });
