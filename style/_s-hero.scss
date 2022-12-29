@@ -1,6 +1,6 @@
 .s-hero {
     padding-top: 106px;
-    background-image: url('/images/s-hero/bg-hero.png');
+    background-image: url('./images/s-hero/bg-hero.png');
     background-repeat: no-repeat;
     background-position-x: right;
     background-size: 1065px;
@@ -23,7 +23,7 @@
             padding-top: 10px;
             margin: 0 auto;
 
-            background-image: url('/images/s-hero/rays.png'), url('/images/s-hero/blue-sun.png');
+            background-image: url('./images/s-hero/rays.png'), url('./images/s-hero/blue-sun.png');
             background-repeat: no-repeat;
             background-position: left top, right bottom;
         }
