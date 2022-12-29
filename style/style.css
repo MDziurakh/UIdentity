@@ -338,7 +338,7 @@ header ._container .hamburger-menu {
     display: grid;
     position: fixed;
     top: 0;
-    right: -365px;
+    right: -605px;
     overflow-y: scroll;
     max-height: 100%;
     background-color: #482FF7;

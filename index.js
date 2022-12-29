@@ -264,7 +264,7 @@ let widthToRight =
   "px";
 // console.log(widthToRight);
 document.addEventListener("click", (e) => {
-  // console.dir(e.target)
+  console.dir(e.target)
   if (
     // menu.classList.contains("active-menu") &&
     !e.target.classList.contains("hamburger-menu") &&
@@ -278,6 +278,7 @@ document.addEventListener("click", (e) => {
     !e.target.classList.contains("uk")&&
     !e.target.classList.contains("i")&&
     !e.target.classList.contains("svg-arrow")&&
+    !e.target.classList.contains("lang-box")&&
     e.target.nodeName !=='path'
   ) {
     if (hamStyle.right == "0px") {
