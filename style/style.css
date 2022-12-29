@@ -713,7 +713,7 @@ header ._container .hamburger-menu .lang-box .uk {
   }
 }
 .s-video {
-  background-image: url("/images/s-icon_boxes-icons/s-icon-boxes-bg.png");
+  background-image: url("../images/s-icon_boxes-icons/s-icon-boxes-bg.png");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 900px;
@@ -2357,7 +2357,7 @@ header ._container .hamburger-menu .lang-box .uk {
     background: no-repeat;
     background-position: 7% 94%;
     background-size: 59px;
-    background-image: url("./images/s-our-team/arrow-icon-reverse.png");
+    background-image: url("../images/s-our-team/arrow-icon-reverse.png");
   }
   .s-our-team ._container .text-block * {
     text-align: left;
