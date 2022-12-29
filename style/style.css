@@ -761,7 +761,7 @@ header ._container .hamburger-menu .lang-box .uk {
   padding: 0 120px;
 }
 .s-icon_boxes ._container .title-block {
-  background-image: url("/images/s-icon_boxes-icons/rays.png"), url("/images/s-icon_boxes-icons/speak-icon.png");
+  background-image: url("../images/s-icon_boxes-icons/rays.png"), url("../images/s-icon_boxes-icons/speak-icon.png");
   background-repeat: no-repeat;
   background-position: top right, center left;
   margin: 0 auto;
@@ -844,7 +844,7 @@ header ._container .hamburger-menu .lang-box .uk {
     padding: 0 33px;
   }
   .s-icon_boxes ._container .title-block {
-    background-image: url("/images/s-icon_boxes-icons/rays.png"), url("/images/s-icon_boxes-icons/speak-icon.png");
+    background-image: url("../images/s-icon_boxes-icons/rays.png"), url("../images/s-icon_boxes-icons/speak-icon.png");
     background-repeat: no-repeat;
     background-position: top right, 50px center;
     margin: 0 auto;
@@ -910,7 +910,7 @@ header ._container .hamburger-menu .lang-box .uk {
     padding: 0 40px;
   }
   .s-icon_boxes ._container .title-block {
-    background-image: url("/images/s-icon_boxes-icons/rays.png"), url("/images/s-icon_boxes-icons/speak-icon.png");
+    background-image: url("../images/s-icon_boxes-icons/rays.png"), url("../images/s-icon_boxes-icons/speak-icon.png");
     background-repeat: no-repeat;
     background-position: top right, 50px center;
     background-size: 24px;
@@ -975,7 +975,7 @@ header ._container .hamburger-menu .lang-box .uk {
     padding: 0px 40px;
   }
   .s-icon_boxes ._container .title-block {
-    background-image: url("/images/s-icon_boxes-icons/rays.png");
+    background-image: url("../images/s-icon_boxes-icons/rays.png");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 24px;
@@ -1039,7 +1039,7 @@ header ._container .hamburger-menu .lang-box .uk {
     padding: 0px 20px;
   }
   .s-icon_boxes ._container .title-block {
-    background-image: url("/images/s-icon_boxes-icons/rays.png");
+    background-image: url("../images/s-icon_boxes-icons/rays.png");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 24px;
@@ -1106,7 +1106,7 @@ header ._container .hamburger-menu .lang-box .uk {
   justify-content: space-between;
   align-items: center;
   box-shadow: 42px -49px 198px -83px rgba(72, 47, 247, 0.61), -45px 34px 227px -90px rgba(243, 241, 105, 0.8);
-  background-image: url("/images/s-small-cta/black-arrow.png"), url("/images/s-small-cta/paper-plane.png");
+  background-image: url("../images/s-small-cta/black-arrow.png"), url("../images/s-small-cta/paper-plane.png");
   background-repeat: no-repeat;
   background-position: 64% 90%, 5% 13%;
 }
@@ -1287,7 +1287,7 @@ header ._container .hamburger-menu .lang-box .uk {
     align-items: center;
     box-shadow: 42px -49px 198px -83px rgba(72, 47, 247, 0.61), -45px 34px 227px -90px rgba(243, 241, 105, 0.8);
     padding: 68px 30px 50px;
-    background-image: url("/images/s-small-cta/paper-plane.png");
+    background-image: url("../images/s-small-cta/paper-plane.png");
     background-repeat: no-repeat;
     background-size: 29px;
     background-position: 90% 4%;
@@ -2094,7 +2094,7 @@ header ._container .hamburger-menu .lang-box .uk {
   }
 }
 .s-our-team {
-  background-image: url("./images/s-our-team/background.png");
+  background-image: url("../images/s-our-team/background.png");
   background-size: 966px;
   background-repeat: no-repeat;
   background-position-x: 212%;
@@ -2248,7 +2248,7 @@ header ._container .hamburger-menu .lang-box .uk {
     background: no-repeat;
     background-position: 97% 100%;
     background-size: 100px;
-    background-image: url("./images/s-our-team/arrow-icon.png");
+    background-image: url("../images/s-our-team/arrow-icon.png");
   }
   .s-our-team ._container .text-block * {
     text-align: left;
