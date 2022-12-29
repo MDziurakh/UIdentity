@@ -264,7 +264,7 @@ let widthToRight =
   "px";
 // console.log(widthToRight);
 document.addEventListener("click", (e) => {
-  console.dir(e.target)
+  // console.dir(e.target)
   if (
     // menu.classList.contains("active-menu") &&
     !e.target.classList.contains("hamburger-menu") &&
