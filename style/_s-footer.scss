@@ -51,6 +51,11 @@
                         font-size: 18px;
                         line-height: 22px;
                         color: black;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            transition: all 0.3s ease;
+                            text-shadow: 0.5px 0px 0px #000;
+                        }
 
                     }
                 }
@@ -80,6 +85,11 @@
                         max-width: fit-content;
                         border-bottom: 2px solid blue;
                         color: black;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            transition: all 0.3s ease;
+                            text-shadow: 0.5px 0px 0px #000;
+                        }
                     }
                 }
             }

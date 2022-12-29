@@ -6,13 +6,12 @@ let sDonateContainer = document.querySelector(".s-donate ._container");
 let menu = document.querySelector("header ._container");
 let header = document.querySelector("header");
 
-  // let opener = document.querySelectorAll(".open");
-  // opener.forEach((item) => {
-  //   item.addEventListener("click", () => {
-  //     menu.classList.toggle("active-menu");
-  //   });
-  // });
-
+// let opener = document.querySelectorAll(".open");
+// opener.forEach((item) => {
+//   item.addEventListener("click", () => {
+//     menu.classList.toggle("active-menu");
+//   });
+// });
 
 // перемикач табів
 buttons.forEach((button) =>
@@ -25,8 +24,22 @@ buttons.forEach((button) =>
     tabsContent.forEach((tabContent) => {
       if (tabContent.classList[0] === e.target.classList[1]) {
         tabContent.style.display = "flex";
-        let a = window.getComputedStyle(button);
-        paymentSwitchBlock.style.borderBottom = `1px solid ${a.backgroundColor}`;
+        // let a = window.getComputedStyle(button);
+        // console.dir(a.background);
+        let b = document.querySelector(".button.active");
+        // console.dir(t);
+        // let b = window.getComputedStyle(t)
+        // console.dir(b);
+        // paymentSwitchBlock.style.borderBottom = `1px solid ${a.backgroundColor}`;
+        if (b.classList.contains("first")) {
+          paymentSwitchBlock.style.borderBottom = `1px solid #482FF7 `;
+        } else if (b.classList.contains("second")) {
+          paymentSwitchBlock.style.borderBottom = `1px solid #2D6CDF `;
+        } else if (b.classList.contains("third")) {
+          paymentSwitchBlock.style.borderBottom = `1px solid #46C3DB `;
+        } else if (b.classList.contains("fourth")) {
+          paymentSwitchBlock.style.borderBottom = `1px solid #0F0B30 `;
+        }
       } else {
         tabContent.style.display = "none";
       }
@@ -43,25 +56,25 @@ copyButtons.forEach((copyButton) => {
         await navigator.clipboard.writeText(
           copyButton.parentElement.children[0].innerText
         );
-        console.log(
-          `Content ${copyButton.parentElement.children[0].innerText} copied to clipboard`
-        );
+        // console.log(
+        //   `Content ${copyButton.parentElement.children[0].innerText} copied to clipboard`
+        // );
       } else if (
         copyButton.parentElement.children[0].children[0].innerText == ""
       ) {
         await navigator.clipboard.writeText(
           copyButton.parentElement.children[0].childNodes[0].data
         );
-        console.log(
-          `Content ${copyButton.parentElement.children[0].childNodes[0].data} copied to clipboard`
-        );
+        // console.log(
+        //   `Content ${copyButton.parentElement.children[0].childNodes[0].data} copied to clipboard`
+        // );
       } else {
         await navigator.clipboard.writeText(
           copyButton.parentElement.children[0].children[0].innerText
         );
-        console.log(
-          `Content ${copyButton.parentElement.children[0].children[0].innerText} copied to clipboard`
-        );
+        // console.log(
+        //   `Content ${copyButton.parentElement.children[0].children[0].innerText} copied to clipboard`
+        // );
       }
     } catch (err) {
       console.error("Failed to copy: ", err);
@@ -239,31 +252,39 @@ carousel();
 
 // //////////////// закривання меню
 
-let hamMenu = document.querySelector('.hamburger-menu');
-let hamStyle = window.getComputedStyle(hamMenu)
+let hamMenu = document.querySelector(".hamburger-menu");
+let hamStyle = window.getComputedStyle(hamMenu);
 
-let hamburgerWidth =  hamStyle.width;
+let hamburgerWidth = hamStyle.width;
 // console.log(hamburgerWidth.length);
 // console.log(hamburgerWidth.substring(0, hamburgerWidth.length - 2));
-let widthToRight = '-' + (+hamburgerWidth.substring(0, +hamburgerWidth.length - 2) + 50).toFixed()+'px';
-// console.log(widthToRight); 
+let widthToRight =
+  "-" +
+  (+hamburgerWidth.substring(0, +hamburgerWidth.length - 2) + 50).toFixed() +
+  "px";
+// console.log(widthToRight);
 document.addEventListener("click", (e) => {
   // console.dir(e.target)
   if (
     // menu.classList.contains("active-menu") &&
     !e.target.classList.contains("hamburger-menu") &&
     !e.target.classList.contains("open") &&
-    e.target.alt !== 'ua' &&
+    e.target.alt !== "ua" &&
     !e.target.classList.contains("lang-switch") &&
     !e.target.localName !== "img" &&
     !e.target.classList.contains("icon-in-hamburger") &&
-    !e.target.classList.contains("lang-switch")
+    !e.target.classList.contains("lang-switch")&&
+    !e.target.classList.contains("ua") &&
+    !e.target.classList.contains("uk")&&
+    !e.target.classList.contains("i")&&
+    !e.target.classList.contains("svg-arrow")&&
+    e.target.nodeName !=='path'
   ) {
-    if(hamStyle.right == '0px'){
+    if (hamStyle.right == "0px") {
       b.classList.remove("show");
       a.classList.add("show");
       hamMenu.style.right = widthToRight;
-     }
+    }
   }
 });
 
@@ -272,31 +293,43 @@ document.addEventListener("click", (e) => {
 let a = document.querySelector("#svg");
 let b = document.querySelector("#non");
 a.addEventListener("click", () => {
-  if(hamStyle.right == '0px'){
+  if (hamStyle.right == "0px") {
     a.classList.remove("show");
     b.classList.add("show");
-    hamMenu.style.right = widthToRight
+    hamMenu.style.right = widthToRight;
     // console.log(hamStyle.right);
-  }
-  else if(hamStyle.right !== '0px'){
+  } else if (hamStyle.right !== "0px") {
     a.classList.remove("show");
     b.classList.add("show");
-    hamMenu.style.right = '0px'
+    hamMenu.style.right = "0px";
     // console.log(hamStyle.right);
   }
+});
+b.addEventListener("click", () => {
+  if (hamStyle.right == "0px") {
+    a.classList.add("show");
+    b.classList.remove("show");
+    hamMenu.style.right = widthToRight;
+    // console.log(hamStyle.right);
+  } else if (hamStyle.right !== "0px") {
+    a.classList.add("show");
+    b.classList.remove("show");
+    hamMenu.style.right = "0px";
+    // console.log(hamStyle.right);
+  }
+});
 
-});
-b.addEventListener("click", () => {
-  if(hamStyle.right == '0px'){
-    a.classList.add("show");
-    b.classList.remove("show");
-    hamMenu.style.right = widthToRight
-    // console.log(hamStyle.right);
-  }
-  else if(hamStyle.right !== '0px'){
-    a.classList.add("show");
-    b.classList.remove("show");
-    hamMenu.style.right = '0px'
-    // console.log(hamStyle.right);
-  }
-});
+// перемикач мови
+let langBoxes = document.querySelectorAll(".lang-box");
+langBoxes.forEach(langBox=>{
+  langBox.lastElementChild.classList.toggle("hide");
+  langBox.children[0].children[1].classList.toggle("hide");
+  langBox.children[1].children[2].classList.toggle("hide");
+  
+  langBox.addEventListener("click", () => {
+    langBox.lastElementChild.children[0].style.pointerEvents = "auto";
+    langBox.lastElementChild.classList.toggle("hide");
+    langBox.firstElementChild.children[2].children[0].classList.toggle("i");
+  });
+})
+  

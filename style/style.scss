@@ -82,16 +82,25 @@ body {
     font-weight: 700;
     line-height: 15px;
     letter-spacing: 0em;
+    transition: all 0.4s ease;
 }
 
 .black-button {
     padding: 13.5px 33.5px;
     background-color: #0F0B30;
+    &:hover{
+        transition: all 0.4s ease;
+        background-color: lighten(#070612, 30%);
+    }
 }
 
 .blue-button {
     padding: 18px 40px;
     background-color: #482FF7;
+    &:hover{
+        transition: all 0.4s ease;
+        background-color: darken(#482FF7, 20%);
+    }
 }
 
 .active {

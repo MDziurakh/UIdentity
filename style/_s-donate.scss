@@ -58,10 +58,32 @@ $second-tab-content-bg_color: #E7F2F7;
                     font-family: 'Neue Machina bold';
                     font-size: 16px;
                     line-height: 23px;
-                    padding: 16px 0 15px;
+                    padding: 16px 0 16px;
                     text-align: center;
                     width: 260px;
                     color: #0F0B3099;
+                    transition: all 0.3s ease;
+
+
+
+                    &.first:hover{
+                        transition: all 0.3s ease;
+                        background-color: rgba($first-tab-color, 0.3);
+                    }
+                    &.second:hover{
+                        transition: all 0.3s ease;
+                        background-color: rgba($second-tab-color, 0.3);
+                    }
+                    &.third:hover{
+                        transition: all 0.3s ease;
+                        background-color: rgba($third-tab-color, 0.3);
+                    }
+                    &.fourth:hover{
+                        transition: all 0.3s ease;
+                        background-color: rgba($fourth-tab-color, 0.1);
+                    }
+                    
+
 
                     &.active {
                         color: #FFFFFF;
@@ -210,7 +232,7 @@ $second-tab-content-bg_color: #E7F2F7;
     }
 }
 
-@media (max-width:1000px) {
+@media (max-width:991.98px) {
     .s-donate {
 
         ._container {
@@ -294,19 +316,30 @@ $second-tab-content-bg_color: #E7F2F7;
 
                         &.first {
                             background-color: $first-tab-color;
+                            &:hover{
+                                background-color: darken($first-tab-color, 20%);
+                            }
                         }
 
                         &.second {
                             background-color: $second-tab-color;
+                            &:hover{
+                                background-color: darken($second-tab-color, 20%);
+                            }
                         }
 
                         &.third {
                             background-color: $third-tab-color;
+                            &:hover{
+                                background-color: darken($third-tab-color, 20%);
+                            }
                         }
 
                         &.fourth {
-
                             background-color: $fourth-tab-color;
+                            &:hover{
+                                background-color: lighten($fourth-tab-color, 10%);
+                            }
                         }
                     }
 
