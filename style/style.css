@@ -339,6 +339,7 @@ header ._container .hamburger-menu {
     position: fixed;
     top: auto;
     bottom: 0;
+    min-height: -webkit-fill-available;
     right: -605px;
     overflow-y: scroll;
     max-height: 100%;
