@@ -294,6 +294,10 @@ document.addEventListener("click", (e) => {
 let a = document.querySelector("#svg");
 let b = document.querySelector("#non");
 a.addEventListener("click", () => {
+  document.body.classList.add('hidden')
+  // document.body.style.overflow ='hidden';
+  // console.log(document.body);
+  // console.log(hamStyle.right);
   if (hamStyle.right == "0px") {
     a.classList.remove("show");
     b.classList.add("show");
@@ -307,6 +311,7 @@ a.addEventListener("click", () => {
   }
 });
 b.addEventListener("click", () => {
+  document.body.classList.remove('hidden')
   if (hamStyle.right == "0px") {
     a.classList.add("show");
     b.classList.remove("show");

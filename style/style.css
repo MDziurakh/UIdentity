@@ -94,6 +94,10 @@
   font-style: normal;
   font-display: swap;
 }
+.hidden {
+  overflow: hidden;
+}
+
 header {
   margin: 0 auto;
   width: 100%;
@@ -337,9 +341,7 @@ header ._container .hamburger-menu {
     z-index: -1;
     display: grid;
     position: fixed;
-    top: auto;
-    bottom: 0;
-    min-height: -webkit-fill-available;
+    top: 0;
     right: -605px;
     overflow-y: scroll;
     max-height: 100%;
