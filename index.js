@@ -282,6 +282,8 @@ document.addEventListener("click", (e) => {
     e.target.nodeName !=='path'
   ) {
     if (hamStyle.right == "0px") {
+      
+  document.body.classList.remove('hidden')
       b.classList.remove("show");
       a.classList.add("show");
       hamMenu.style.right = widthToRight;
@@ -295,6 +297,7 @@ let a = document.querySelector("#svg");
 let b = document.querySelector("#non");
 a.addEventListener("click", () => {
   document.body.classList.add('hidden')
+  console.log(2);
   // document.body.style.overflow ='hidden';
   // console.log(document.body);
   // console.log(hamStyle.right);
@@ -311,7 +314,6 @@ a.addEventListener("click", () => {
   }
 });
 b.addEventListener("click", () => {
-  document.body.classList.remove('hidden')
   if (hamStyle.right == "0px") {
     a.classList.add("show");
     b.classList.remove("show");
