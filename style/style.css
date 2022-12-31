@@ -337,8 +337,8 @@ header ._container .hamburger-menu {
     z-index: -1;
     display: grid;
     position: fixed;
-    top: 0;
-    bottom: -100px;
+    top: auto;
+    bottom: 0;
     right: -605px;
     overflow-y: scroll;
     max-height: 100%;
