@@ -2607,7 +2607,7 @@ header ._container .hamburger-menu .lang-box .uk {
           animation-play-state: paused;
 }
 .i-slider-block .wrap .i-slider-track .slide {
-  background-image: url("/images/s-carousel/blue-house-logo.png");
+  background-image: url("../images/s-carousel/blue-house-logo.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 88px;
@@ -2637,7 +2637,7 @@ header ._container .hamburger-menu .lang-box .uk {
   }
 }
 .i-slider-block .wrap .i-slider-track .slide:nth-child(even) {
-  background-image: url("/images/s-carousel/paper-airplane-toy.png");
+  background-image: url("../images/s-carousel/paper-airplane-toy.png");
 }
 .i-slider-block .wrap .i-slider-track .img:hover {
   transform: translateZ(10px);
