@@ -121,6 +121,25 @@
         }
     }
 }
+// @media (max-width: 506px) {
+//     .s-hero {
+//         ._container {
+//             h1 {
+//                 max-width: 508px;
+//                 background-size: 25px, 30px;
+//             }
+
+//             .button-block {
+//                 a {
+//                     width: 275px;
+//                     text-align: center;
+//                     font-size: 16px;
+//                     line-height: 15.44px;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 @media (max-width: 496px) {
     .s-hero {
@@ -151,9 +170,9 @@
             padding: 20px 10px;
 
             h1 {
-                max-width: 335px;
-                font-size: 24px;
-                line-height: 33px;
+                max-width: 283px;
+                font-size: 40px;
+                line-height: 42px;
             }
         }
     }
