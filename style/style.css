@@ -2618,12 +2618,12 @@ header ._container .hamburger-menu .lang-box .uk {
   align-items: center;
   margin: 0 12px;
   border-radius: 10px;
-  box-shadow: 0px 0px 106px -22px rgba(113, 113, 113, 0.27);
+  box-shadow: 0px 0px 106px -22px rgba(113, 113, 113, 0.14);
   transition: transform 1s;
 }
 @media (max-width: 991.98px) {
   .i-slider-block .wrap .i-slider-track .slide {
-    box-shadow: 0px 0px 71px -14px rgba(113, 113, 113, 0.34);
+    box-shadow: 0px 0px 71px -14px rgba(113, 113, 113, 0.14);
   }
 }
 @media (max-width: 700px) {
