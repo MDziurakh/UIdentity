@@ -123,7 +123,7 @@ function scrollFunction() {
       header.classList.remove("bg-header");
       document
         .getElementById("scroll-to-small")
-        .classList.remove("backsmaller-pd");
+        .classList.remove("smaller-pd");
     }
   }
   // else if (+screen.width < 582) {
@@ -145,7 +145,7 @@ function scrollFunction() {
       header.classList.remove("bg-header");
       document
         .getElementById("scroll-to-small")
-        .classList.remove("backsmaller-pd");
+        .classList.remove("smaller-pd");
     }
   }
 }

@@ -14,15 +14,18 @@ header {
     &.bg-header {
         background-color: rgba(255, 255, 255, 0.788);
         // background-color: rgba(200, 0, 0, 0.788);
+        // transition: all ease-in-out 0.4s;
     }
-
+    
     #scroll-to-small {
-        padding: 60px 40px 0 40px;
-        padding: 60px 40px 0 40px;
+        // padding: 60px 40px 0 40px;
+        padding: 20px 40px 20px 40px;
         position: relative;
         z-index: -2;
-
+        // transition: all ease-in-out 0.4s;
+        
         &.smaller-pd {
+            // transition: all ease-in-out 0.4s;
             padding: 20px 40px 20px 40px;
         }
     }
