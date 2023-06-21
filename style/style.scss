@@ -1,15 +1,22 @@
 @import 'fonts';
-// @import 'header';
-@import 'header2';
+@import 'colors';
+
+@import 'header';
+
+@import 'c-mobile-menu';
+@import 'c-langauge-block';
+@import 'c-buttons';
+@import 'c-text-elements';
+
+
 @import 's-hero';
 @import 's-video';
-@import 's-icon_boxes';
+@import 's-icon-boxes';
 @import 's-small-cta';
-@import 's-purpose';
+@import 's-image-text';
 @import 's-donate';
 @import 's-our-team';
-@import 's-carousel';
-@import 's-i_slider';
+@import 's-inf-carousel';
 @import 's-faq';
 @import 's-big-cta';
 @import 's-footer';
@@ -32,6 +39,7 @@ html {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 ul,
@@ -41,7 +49,10 @@ li {
 }
 
 img {
-    vertical-align: top;
+    display: block;
+    border: none;
+    max-width: 100%;
+    height: auto;
 }
 
 h1,
@@ -50,7 +61,6 @@ h3,
 h4,
 h5,
 h6 {
-    text-align: center;
     font-weight: inherit;
     font-size: inherit;
 }
@@ -61,131 +71,42 @@ body {
     font-size: 16px;
     font-family: 'Neue Machina';
     color: #000;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
 }
 
-._wrapper {
+.wrapper {
     min-height: 100%;
-    overflow: hidden;
 }
 
-._container {
+.container {
     max-width: 1440px;
     margin: 0 auto;
-    // background-color: antiquewhite; 
-    // //////////////////////////////////////////////////////////////////
-}
+    text-align: center;
+    padding: 0 20px;
 
-//-------------- кнопки не знаю куди виносити------
-.button {
-    display: inline-block;
-    color: white;
-    border-radius: 4px;
-    font-weight: 700;
-    line-height: 15px;
-    letter-spacing: 0em;
-    transition: all 0.4s ease;
-}
+    @media (min-width:768px) {
+        padding: 0 40px;
+    }
 
-.black-button {
-    padding: 13.5px 33.5px;
-    background-color: #0F0B30;
-    &:hover{
-        transition: all 0.4s ease;
-        background-color: lighten(#070612, 30%);
+    @media (min-width:1240px) {
+        padding: 0 60px;
     }
 }
 
-.blue-button {
-    padding: 18px 40px;
-    background-color: #482FF7;
-    &:hover{
-        transition: all 0.4s ease;
-        background-color: darken(#482FF7, 20%);
+.section-wrapper {
+    padding: 65px 0 15px;
+    // padding: 40px 0;
+
+    @media (min-width:768px) {
+        // padding: 50px 0;
+        padding: 70px 0 30px;
     }
-}
 
-.active {
-    background-color: #482FF7;
-    border-radius: 4px 4px 0 0;
-}
-
-.passive {
-    color: rgba(15, 11, 48, 0.6);
-}
-
-// ----title, subtitle i subheading так само хочу винести в окремий стиль
-.title {
-    font-family: 'Neue Machina bold';
-    font-size: 48px;
-    line-height: 53.76px;
-}
-
-.subtitle {
-    //styleName: Text;
-    font-family: 'Neue Machina regular';
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 29px;
-    letter-spacing: 0em;
-}
-
-
-.subheading {
-    font-family: 'Neue Machina bold';
-    color: #2D6CDF;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 29px;
-    letter-spacing: 0em;
-}
-
-.regular-text {
-    font-family: 'Neue Machina regular';
-    font-size: 20px;
-    line-height: 29px;
-    letter-spacing: 0em;
-}
-
-// ----------
-
-.svg-cont {
-    width: 30px;
-    height: 30px;
-    // border: 1px dashed #aaa;
-}
-
-#svg {
-    width: 100%;
-    height: 0;
-    transition: all 0.6s ease;
-
-    path {}
-
-    &.show {
-        rotate: 360deg;
-        height: 100%;
+    @media (min-width:992px) {
+        // padding: 60px 0;
+        padding: 80px 0 20px;
     }
-}
 
-#non {
-    // display: none;
-    width: 100%;
-    height: 0;
-    transition: all 0.5s ease-in-out;
-    position: relative;
-    top: -16px;
-    right: -0px;
-    // width: 50%;
-
-    &.show {
-        rotate: 360deg;
-        height: 100%;
-
-        position: relative;
-        top: -16px;
-        right: -0px;
-
-
-
-    }
 }

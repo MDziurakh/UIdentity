@@ -1,0 +1,169 @@
+.black-btn {
+    display: inline-block;
+    padding: 13.5px 33.5px;
+    background-color: #0F0B30;
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 15px;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.2s ease;
+
+    &:hover {
+        transition: all 0.2s ease;
+        background-color: lighten(#070612, 30%);
+    }
+}
+
+.blue-btn {
+    display: inline-block;
+    padding: 13.5px 33.5px;
+    background-color: #482FF7;
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 15px;
+    border-radius: 4px;
+    text-align: center;
+    width: 275px;
+    transition: all 0.2s ease;
+
+    @media (min-width:768px) {
+        width: 219px;
+    }
+
+    &:hover {
+        transition: all 0.2s ease;
+        background-color: darken(#482FF7, 30%);
+    }
+}
+
+.donate-btn {
+    font-family: 'Neue Machina bold';
+    font-size: 14px;
+    line-height: 146%;
+    border-radius: 4px;
+    padding: 17px 20px 14px;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    color: #FFFFFF;
+    position: relative;
+
+    @media (min-width:375px) {
+        font-size: 16px;
+    }
+
+    &.acc-switch {
+        &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            right: 24px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url('../assets/images/s-donate/plus-close.png');
+            transform: rotate(45deg);
+            transition: all .2s ease;
+        }
+
+        &.active::after {
+            transform: rotate(180deg);
+
+        }
+    }
+
+
+}
+
+.img-btn {
+    cursor: pointer;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .1s ease;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+
+    &.copy-btn {
+        background-size: 18px;
+        height: 25px;
+        width: 25px;
+        background-image: url('../assets/images/s-donate/copy-icon.jpg');
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(0.8);
+    }
+
+    &.link-btn {
+        background-size: 23px;
+        height: 26px;
+        width: 26px;
+        background-image: url('../assets/images/s-donate/link-icon.jpg');
+
+        a {
+            display: block;
+            height: 100%;
+        }
+    }
+
+}
+
+.faq-btn {
+    font-family: 'Neue Machina bold';
+    font-size: 16px;
+    line-height: 132%;
+    padding-right:50px;
+    position: relative;
+    @media (min-width:768px) {
+        font-size: 18px;
+    }
+    @media (min-width:992) {
+        font-size: 22px;
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        height: 18px;
+        width: 18px;
+        top: 5px;
+        right: 24px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url('../assets/images/s-faq/plus.png');
+        transition: all .3s ease;
+    }
+    
+    &.active::after {
+        transform: rotate(180deg);
+
+    }
+}
+
+.menu-item-link{
+    transition: .2s all ease;
+    &:hover{
+        text-shadow: 0.5px 0px 0px #000;
+        transition: .2s all ease;
+    }
+}

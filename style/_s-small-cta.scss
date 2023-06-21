@@ -1,355 +1,211 @@
 .s-small-cta {
+    position: relative;
 
-    padding-top: 94px;
 
-    ._container {
-        padding: 80px 60px 60px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background: #482FF7;
+        opacity: 0.6;
+        filter: blur(100px);
+        border-radius: 100px;
+        transform: rotate(180deg);
+        z-index: -1;
+        max-width: 388px;
+        width: 70%;
+        height: 50%;
 
-        .small-cta {
-            // border: 1px solid gold;
-            border-radius: 12px;
-            padding: 0 60px;
-            display: flex;
+        @media (min-width:992px) {
+            filter: blur(301px);
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 150px;
+        left: 0;
+        background: #F3F169;
+        ;
+        filter: blur(100px);
+        border-radius: 100px;
+        transform: rotate(180deg);
+        z-index: -1;
+        max-width: 388px;
+        width: 50%;
+        height: 50%;
+        opacity: 0.6;
+
+        @media (min-width:992px) {
+            filter: blur(220px);
+
+        }
+
+    }
+
+    .small-cta-wrapper {
+        padding: 50px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 8px 4px 77px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        background-repeat: no-repeat;
+        background-position: top 26px right 30px;
+        background-size: 29px;
+        background-image: url('../assets/images/s-small-cta/paper-plane.png');
+
+        @media (min-width:768px) {
+            background-position: top 40px right 40px;
+            background-size: 40px;
+            padding: 50px 30px;
+            flex-direction: row;
             justify-content: space-between;
-            align-items: center;
-            box-shadow: 42px -49px 198px -83px rgb(72 47 247 / 61%), -45px 34px 227px -90px rgb(243 241 105/ 80%);
-            background-image: url('../images/s-small-cta/black-arrow.png'), url('../images/s-small-cta/paper-plane.png');
+            // gap: 20px;
+        }
+
+        @media (min-width:992px) {
+            background-position: top 40px left 40px;
+            padding: 80px 100px;
+            background-size: 60px;
+        }
+
+        @media (min-width:1240px) {
+            padding: 100px 120px;
+        }
+    }
+
+    .progress-block {
+        flex: 2;
+        padding: 32px 0;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -70%;
+            display: none;
+            height: 110px;
+            width: 200px;
+            background-position: center;
+            background-size: cover;
             background-repeat: no-repeat;
-            background-position: 64% 90%, 5% 13%;
+            background-image: url('../assets/images/s-small-cta/black-arrow.png');
+
+            @media (min-width:768px) {
+                display: inline-block;
+            }
+        }
+
+        @media (min-width:768px) {
+            // padding: 0 0 0 100px;
+        }
+    }
+
+    .svg-cont {
+        margin: 0 auto;
+        width: 243px;
+        height: 243px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        @media (min-width:768px) {
+            width: 263px;
+            height: 263px;
+            margin-right: 0;
+        }
+
+        h4 {
+            font-family: 'Neue Machina medium';
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: 0em;
+
+        }
+
+        h2 {
+            padding: 12px 0 6px;
+            font-family: 'Neue Machina bold';
+            font-size: 36px;
+            line-height: 40px;
+            letter-spacing: 0em;
+            color: rgba(72, 47, 247, 1);
 
 
-            .description-block {
-                padding-left: 60px;
+        }
 
-                h3 {
-                    max-width: 488px;
-                    text-align: start;
-                    font-family: 'Neue Machina bold';
-                    font-size: 32px;
-                    font-weight: 700;
-                    line-height: 39px;
-                    letter-spacing: 0em;
+        h5 {
+            font-family: 'Neue Machina medium';
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 0em;
+            color: rgba(15, 11, 48, 0.4);
+        }
 
-                }
+        svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
 
-                p {
-                    max-width: 488px;
-                    padding: 16px 0 20px 0;
-                    text-align: start;
-
-                    .specific-name-bold {
-                        font-family: 'Neue Machina bold';
-                        font-size: 20px;
-                        line-height: 29px;
-                        letter-spacing: 0em;
-                        text-align: left;
-
-                    }
-                }
-
-                .button {
-                    display: inline-block;
-                    font-family: 'Neue Machina bold';
-                    font-size: 16px;
-                    padding: 14px 22px;
-
-                }
+            .circle {
+                fill: none;
+                stroke-width: 12px;
+                stroke: rgba(243, 241, 105, 1);
+                stroke-dasharray: calc(0.2 * calc(6.28319 * 200)) calc(6.28319 * 200);
             }
 
-            .progress-block {
-                padding: 102px 120px 102px 0;
-
-                .svg-cont {
-                    width: 293px;
-                    height: 293px;
-                    display: flex;
-                    justify-content: center;
-                    flex-direction: column;
-                    align-items: center;
-                    position: relative;
-
-                    h4 {
-                        font-family: 'Neue Machina medium';
-                        font-size: 18px;
-                        line-height: 20px;
-                        letter-spacing: 0em;
-
-                    }
-
-                    h2 {
-                        padding: 12px 0 6px;
-                        font-family: 'Neue Machina bold';
-                        font-size: 36px;
-                        line-height: 40px;
-                        letter-spacing: 0em;
-                        color: rgba(72, 47, 247, 1);
-
-
-                    }
-
-                    h5 {
-                        font-family: 'Neue Machina medium';
-                        font-size: 16px;
-                        line-height: 18px;
-                        letter-spacing: 0em;
-                        color: rgba(15, 11, 48, 0.4);
-                    }
-
-                    svg {
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-
-                        .circle {
-                            fill: none;
-                            stroke-width: 12px;
-                            stroke: rgba(243, 241, 105, 1);
-                            stroke-dasharray: calc(0.2 * calc(6.28319 * 200)) calc(6.28319 * 200);
-                        }
-
-                        .circle-bg {
-                            fill: none;
-                            stroke-width: 12px;
-                            stroke: rgba(15, 11, 48, 0.1);
-                        }
-                    }
-                }
-            }
-
-            .button {
-                display: none;
+            .circle-bg {
+                fill: none;
+                stroke-width: 12px;
+                stroke: rgba(15, 11, 48, 0.1);
             }
         }
     }
-}
 
-@media (max-width:1380px) {
-    .s-small-cta {
-        padding-top: 154px;
+    .purpose-block {
+        text-align: left;
 
-        ._container {
-            .small-cta {
-                .progress-block {
-                    padding: 102px 50px 102px 0;
-                }
+        .blue-btn {
+            display: none;
 
+            @media (min-width:768px) {
+                margin-top: 20px;
+                display: inline-block;
+                text-align: center !important;
             }
         }
     }
-}
 
-@media (max-width:1180px) {
-    .s-small-cta {
-        padding-top: 124px;
 
-        ._container {
-            .small-cta {
-                padding: 0 30px;
 
-                .progress-block {
-                    padding: 102px 30px 102px 0;
-                }
+    .purpose-heading {
+        font-family: 'Neue Machina bold';
+        font-size: 24px;
+        line-height: 122.5%;
 
-            }
+        @media (min-width:768px) {
+            font-size: 28px;
+        }
+
+        @media (min-width:992px) {
+            font-size: 32px;
         }
     }
-}
 
-
-@media (max-width:1080px) {
-    .s-small-cta {
-        padding-top: 124px;
-
-        ._container {
-            padding: 80px 40px 60px;
-
-            .small-cta {
-                padding: 0 30px;
-                background-size: 140px, 60px;
-
-
-                .description-block {
-                    h3 {
-                        font-size: 30px;
-                        line-height: 37px;
-                    }
-
-                }
-
-                .progress-block {
-                    padding: 90px 0 90px 0;
-
-                    .svg-cont {
-                        width: 243px;
-                        height: 243px;
-                    }
-                }
-
-            }
-        }
-    }
-}
-
-@media (max-width:850px) {
-    .s-small-cta {
-        padding-top: 84px;
-
-        ._container {
-            padding: 80px 30px 60px;
-
-            .small-cta {
-                padding: 0 20px;
-                background-size: 140px, 40px;
-
-
-                .description-block {
-                    padding-left: 20px;
-
-                    h3 {
-                        font-size: 28px;
-                        line-height: 35px;
-
-                    }
-
-                    p {
-                        .specific-name-bold {
-                            font-size: 18px;
-                            line-height: 25px;
-
-                        }
-                    }
-
-                }
-
-                .progress-block {
-                    padding: 90px 0 90px 0;
-                }
-            }
-        }
-    }
-}
-
-
-@media (max-width:718px) {
-    .s-small-cta {
-        padding-top: 80px;
-
-        ._container {
-            padding: 80px 20px 60px;
-
-            @media(max-width:581.98px) {
-                padding: 60px 20px 60px;
-            }
-
-            .small-cta {
-                // border: 1px solid gold;
-                border-radius: 12px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                box-shadow: 42px -49px 198px -83px rgb(72 47 247 / 61%), -45px 34px 227px -90px rgb(243 241 105/ 80%);
-                padding: 68px 30px 50px;
-                background-image: url('../images/s-small-cta/paper-plane.png');
-                background-repeat: no-repeat;
-                background-size: 29px;
-                background-position: 90% 4%;
-
-
-
-                .description-block {
-                    padding-left: 0;
-
-                    h3 {
-                        font-size: 24px;
-                        line-height: 29px;
-                        padding-bottom: 16px;
-                    }
-
-                    p {
-                        font-family: 'Neue Machina regular';
-                        padding: 0;
-                        font-size: 14px;
-                        line-height: 20px;
-
-                        .specific-name-bold {
-                            font-family: 'Neue Machina bold';
-                            font-size: 14px;
-                            line-height: 20px;
-                        }
-                    }
-
-                    .button {
-                        display: none;
-                    }
-                }
-
-                .progress-block {
-                    padding: 32px 0;
-
-                    .svg-cont {
-                        width: 246px;
-                        height: 246px;
-                        display: flex;
-                        justify-content: center;
-                        flex-direction: column;
-                        align-items: center;
-                        position: relative;
-
-                        h4 {
-                            font-size: 15px;
-                            line-height: 17px;
-                        }
-
-                        h2 {
-                            padding: 9.87px 0 4.67px;
-                            font-size: 30px;
-                            line-height: 34px;
-
-                        }
-
-                        h5 {
-                            font-size: 15px;
-                            line-height: 17px;
-                        }
-
-                        svg {
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            top: 0;
-                            bottom: 0;
-                            left: 0;
-                            right: 0;
-
-                            .circle {
-                                fill: none;
-                                stroke-width: 12px;
-                                stroke: rgba(243, 241, 105, 1);
-                                stroke-dasharray: calc(0.2 * calc(6.28319 * 200)) calc(6.28319 * 200);
-                            }
-
-                            .circle-bg {
-                                fill: none;
-                                stroke-width: 12px;
-                                stroke: rgba(15, 11, 48, 0.1);
-                            }
-                        }
-                    }
-                }
-
-                .button {
-                    display: inline-block;
-                    width: 100%;
-                    text-align: center;
-                    font-size: 16px;
-                    line-height: 15px;
-                }
-            }
+    .btn-container {
+        @media (min-width:768px) {
+            display: none;
         }
     }
 }

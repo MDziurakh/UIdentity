@@ -1,178 +1,87 @@
 .s-big-cta {
-    ._container {
-        padding: 80px 40px 0;
-
-        .big-cta {
-            padding: 80px 120px 140px;
-
-            @media (max-width:1150px) {
-                padding: 80px 80px 140px;
-
-            }
-
-            background-color: rgba(72, 47, 247, 1);
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-
-            * {
-                text-align: center;
-                color: white;
-
-            }
-
-            .main-title {
-                width: 100%;
-                //  220
-                padding-bottom: 40px;
-
-                @media(max-width: 910px) {
-                    padding-bottom: 20px;
-                }
-
-                padding-bottom: 40px;
-                font-family: 'Neue Machina bold';
-                font-size: 15.24vw;
-                line-height: 91%;
-                letter-spacing: 0em;
-                text-align: center;
-                text-transform: uppercase;
-                background-image: url('../images/s-big-cta/yellow-heart.png'),
-                url('../images/s-big-cta/left-photo.png'),
-                url('../images/s-big-cta/right-photo.png');
-                background-repeat: no-repeat;
-                background-position: right top,
-                left 47.5%,
-                right bottom;
-                background-size: 12%,
-                26.65%,
-                18%;
-                @media(min-width: 1440px){
-                    font-size: 220px;
-                    line-height: 191px;
-                    
-                }
-                }
-
-            .regular-text {
-                padding: 48px 0 20px;
-                max-width: 645px;
-            }
-
-            .button {
-                // padding: 20px 0 140px;
-                // display: block;
-            }
-
-        }
+    .big-cta-inner {
+        color: #fff;
+        border-radius: 12px;
+        background-color: rgba(72, 47, 247, 1);
+        padding: 70px 20px 40px;
+        @media (min-width:375px) {
+        padding: 70px 40px 40px;
     }
-}
 
-@media (max-width:864.98px) {
-    .s-big-cta {
-        ._container {
-            // padding: 40px 40px 0;
+        @media (min-width:768px) {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
 
-            .big-cta {
-                padding: 80px 60px 62px;
+        @media (min-width:992px) {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
 
-                // @media (max-width:1150px) {
-                @media (max-width:764.98px) {
-                    padding: 80px 40px 140px;
+        @media (min-width:1240px) {
+            padding-top: 144px;
+            padding-bottom: 144px;
+        }
 
-                }
+    }
 
-                @media (max-width:590.98px) {
-                    padding: 80px 20px 140px;
+    .cta-heading {
+        padding: 6px 11px 16px 11px;
+        max-width: min-content;
+        position: relative;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-size: 30% auto, auto 48%;
+        background-position: left  center, right bottom;
+        background-image: url('../assets/images/s-big-cta/left-photo.png'), url('../assets/images/s-big-cta/right-photo.png');
+        
+        &::before {
+            position: absolute;
+            top: -43px;
+            right: 0;
+            content: '';
+            display: inline-block;
+            height: 43px;
+            width: 43px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('../assets/images/s-big-cta/yellow-heart.png');
 
-                }
+            @media (min-width:768px) {
+                top: 0;
+                right: -60px;
+                height: 75px;
+                width: 75px;
+            }
 
-                background-color: rgba(72, 47, 247, 1);
-                border-radius: 10px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            @media (min-width:992px) {
+                top: -60px;
+                height: 105px;
+                width: 105px;
+            }
 
-
-                * {
-                    text-align: center;
-                    color: white;
-
-                }
-
-                .main-title {
-                    width: 100%;
-                    //  220
-                    padding-bottom: 10px;
-                    background-size: 12%, 26.65%, 18%;
-                    background-position: right top,
-                left 50.5%,
-                right bottom;
-
-                }
-
-                .regular-text {
-                    padding: 48px 0 20px;
-                    max-width: 87%;
-                    font-size: 16px;
-                    line-height: 23px;
-
-                    @media (max-width:590.98px) {
-                        font-size: 13px;
-                        line-height: 19px;
-                    }
-
-                }
-
-                .button {
-                    padding: 18px 40px;
-                    // display: block;
-                }
-
+            @media (min-width:1240px) {
+                right: -80px;
+                height: 135px;
+                width: 135px;
             }
         }
     }
-}
 
-@media (max-width:425.98px) {
-    .s-big-cta {
-        ._container {
-            padding: 40px 20px;
-
-            .big-cta {
-                padding: 40px 30px 40px;
-
-                .main-title {
-                    padding-top: 40px;
-                    width: 100%;
-                    //  220
-                    padding-bottom: 10px;
-                    background-position: 87% top, left 58.5%, right bottom;
-                    background-size: 13%, 28.65%, 20%;
-
-                }
-
-                .regular-text {
-
-                    padding: 38px 0 24px;
-                    font-size: 13px;
-                    line-height: 19px;
-
-                }
-
-                .button {
-                    padding: 14px 40px;
-                    width: 100%;
-                    font-size: 16px;
-                    line-height: 15px;
-
-                }
-
-            }
+    .cta-description {
+        padding-top: 38px;
+        max-width: 90%;
+        margin: 0 auto;
+        @media (min-width:768px) {
+            max-width: 58%;
         }
+        @media (min-width:992px) {
+            max-width: 58%;
+        }
+    }
+
+    .black-btn {
+        margin-top: 24px;
     }
 }

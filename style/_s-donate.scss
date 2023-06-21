@@ -3,632 +3,337 @@ $second-tab-color: #2D6CDF;
 $third-tab-color: #46C3DB;
 $fourth-tab-color: #0F0B30;
 
-$first-tab-content-bg_color: #F6FCFD;
-$second-tab-content-bg_color: #E7F2F7;
-
-
 .s-donate {
-    padding: 80px 20px 0;
+    position: relative;
 
-    ._container {
-        min-height: 852px;
-        border: 5px solid #fff;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 150px;
+        right: 30%;
+        background: #482FF7;
+        opacity: 0.6;
+        filter: blur(188px);
+        border-radius: 100px;
+        transform: rotate(180deg);
+        z-index: -2;
+        max-width: 388px;
+        width: 50%;
+        height: 100%;
+        max-height: 318px;
+
+        @media (min-width: 768px) {
+            top: 100px;
+        }
+    }
+
+    .container {
+        padding: 0 20px !important;
+    }
+
+    .block-heading {
+        padding: 0 78px 40px 0;
+        text-align: left;
+        position: relative;
+        z-index: 1;
+
+        @media (min-width:600px) {
+            text-align: center;
+            padding: 0 0 40px;
+        }
+
+        @media (min-width:992px) {
+            padding: 0 0 60px;
+
+        }
+
+    }
+
+    .s-donate-inner {
         border-radius: 12px;
-        padding: 0 162px;
-        background-color: $first-tab-content-bg_color; 
-        box-shadow: -255px -223px 322px -297px rgb(72 47 247 / 50%), 0 0px 69px -39px #777;
+        padding: 40px 30px;
+        background-color: rgba(240, 250, 252);
+        border: 2px solid #fff;
+        box-shadow: 0px 4px 64px rgba(15, 11, 48, 0.08);
+        position: relative;
 
-        @media(max-width:1392px) {
-            padding: 0 100px;
+        @media (min-width:768px) {
+            padding: 160px 30px 40px;
         }
 
-        @media(max-width:1270px) {
-            padding: 0 60px;
+        @media (min-width:992px) {
+            padding: 230px 60px 60px;
         }
 
-        // background-color: #c7c1ee; // тест
-        &.accordion {
-            display: none;
+        @media (min-width:1240px) {
+            padding: 230px 80px 80px;
         }
 
-        .donate-top-block {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 80px 0 0;
+        &::after {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            height: 33px;
+            width: 46px;
+            top: 50px;
+            right: 30px;
+            background: url('../assets/images/s-donate/money-icon.jpg') no-repeat;
+            background-size: contain;
 
-            img {
-                padding-bottom: 12px;
+            @media (min-width:375px) {
+                top: 40px;
+                height: 47px;
+                width: 66px;
+
+            }
+
+            @media (min-width:768px) {
+                height: 69px;
+                width: 94px;
+                top: 80px;
+                left: 0;
+                right: 0;
                 margin: 0 auto;
-                width: 100%;
-                min-width: 46px;
-                max-width: 111px;
             }
 
-            h2 {
-                padding: 60px 0;
+            @media (min-width:992px) {
+                height: 78px;
+                width: 111px;
             }
 
-            .payment-switch-block {
-                border-bottom: 1px solid $first-tab-color;
-                display: flex;
-                justify-content: space-between;
 
-                .button {
-                    font-family: 'Neue Machina bold';
-                    font-size: 16px;
-                    line-height: 23px;
-                    padding: 16px 0 16px;
-                    text-align: center;
-                    width: 260px;
-                    color: #0F0B3099;
-                    transition: all 0.3s ease;
+        }
 
+        .laptop-donate-wrapper {
+            text-align: left;
+            display: none;
 
-
-                    &.first:hover{
-                        transition: all 0.3s ease;
-                        background-color: rgba($first-tab-color, 0.3);
-                    }
-                    &.second:hover{
-                        transition: all 0.3s ease;
-                        background-color: rgba($second-tab-color, 0.3);
-                    }
-                    &.third:hover{
-                        transition: all 0.3s ease;
-                        background-color: rgba($third-tab-color, 0.3);
-                    }
-                    &.fourth:hover{
-                        transition: all 0.3s ease;
-                        background-color: rgba($fourth-tab-color, 0.1);
-                    }
-                    
-
-
-                    &.active {
-                        color: #FFFFFF;
-                    }
-
-                    &.active.first {
-                        background-color: $first-tab-color;
-                    }
-
-                    &.active.second {
-                        background-color: $second-tab-color;
-                    }
-
-                    &.active.third {
-                        background-color: $third-tab-color;
-                    }
-
-                    &.active.fourth {
-                        background-color: $fourth-tab-color;
-                    }
-                }
+            @media (min-width:992px) {
+                display: block;
             }
         }
+
+        .mobile-donate-wrapper {
+            text-align: left;
+
+            .donate-btn {
+                margin-bottom: 10px;
+            }
+
+            @media (min-width:768px) {
+                margin: 0 auto;
+                max-width: 80%;
+            }
+
+            @media (min-width:992px) {
+                display: none;
+            }
+        }
+
+        .tab-wrapper {
+            width: 100%;
+        }
+
 
         .payment-details-blocks {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.2s ease-out;
+            width: 100%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center;
 
-            @media(max-width:1200px) {
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                @media (min-width: 1001px) {
-                    min-height: 580px;
-                    justify-content: flex-start;
+            &.active {
+                max-height: none;
+                transition: all 0.2s ease-out;
+
+            }
+
+            .payment-details-block-item:not(:first-child) {
+                padding-top: 40px;
+                padding-bottom: 20px;
+
+            }
+
+            @media (min-width:992px) {
+                max-height: fit-content;
+                // overflow-y: auto;
+                justify-content: space-between;
+                min-height: 330px;
+
+                &.first {
+                    display: flex;
+                }
+
+                display: none;
+
+            }
+
+            .payment-details-block-item {
+                width: 100%;
+
+                max-width: 100%;
+
+                @media (min-width:992px) {
+                    max-width: 47%;
                 }
             }
 
-            &.first {
-                display: flex;
-                // display: none;
-            }
-
-            &.second {
-                display: flex;
-                display: none;
-            }
-
-            &.third {
-                display: flex;
-                display: none;
-            }
-
-            &.fourth {
-                display: flex;
-                display: none;
-            }
         }
 
         .payment-details-block-item {
-            padding-top: 68px;
-            width: 100%;
-            max-width: 502px;
+            padding-top: 30px;
+            padding-bottom: 0;
 
-            @media(max-width:1200px) {
-                max-width: 70%;
+            @media (min-width:992px) {
+                padding: 68px 0 0px !important;
             }
 
-            * {
-                text-align: left;
-            }
-
-            .payment-details-block-title {
-                font-family: 'Neue Machina ultrabold';
-                font-size: 22px;
-                line-height: 29px;
+            .payment-block__title {
                 padding-bottom: 18px;
+                border-bottom: 1px solid rgba(15, 11, 48, 0.2);
+                font-family: 'Neue Machina bold';
+                font-size: 18px;
+                line-height: 132%;
+
             }
 
-            hr {
-                width: 100%;
-                height: 1px;
-                background: rgba(15, 11, 48, 0.2);
-            }
-
-
-            .payment-details-block-body {
+            .payment-block__body {
                 padding-top: 24px;
 
-                .copy-button,
-                .link-button {
-                    max-width: 26px;
-                    max-height: 26px;
-                    cursor: pointer;
+                >:not(:last-child) {
+                    padding-bottom: 6px;
                 }
 
-                .copy-button:hover,
-                .link-button:hover {
-                    transition: transform .2s;
-                    transform: scale(1.1)
+
+                .payment-name {
+                    font-size: 12px;
+                    line-height: 146%;
+                    text-align: left;
+
+
+                    .bolder {
+                        font-family: 'Neue Machina bold';
+                        overflow-wrap: break-word;
+
+                    }
+
+                    @media (min-width:768px) {
+                        font-size: 16px;
+                    }
+
+                    @media (min-width:992px) {
+                        font-size: 18px;
+
+                    }
+
                 }
 
-                .copy-button:active,
-                .link-button:active {
-                    transition: transform .2s;
-                    transform: scale(0.9)
-                }
-
-                .card-number-bold {
+                .credit-card {
                     font-family: 'Neue Machina bold';
-                    font-size: 24px;
-                    line-height: 35px;
+                    font-size: 18px;
+                    line-height: 146%;
+
+                    @media (min-width:992px) {
+                        font-size: 24px;
+
+                    }
                 }
 
-                .medium-name-16 {
+                .payment-name-medium {
                     font-family: 'Neue Machina medium';
                     font-size: 16px;
-                    line-height: 23px;
-                }
-
-                .medium-name-18 {
-                    font-family: 'Neue Machina medium';
-                    font-size: 18px;
-                    line-height: 26.28px;
-                }
-
-                .regular-name {
-                    font-family: 'Neue Machina regular';
-                    font-size: 18px;
-                    line-height: 26px;
-
-                    .bold-detail {
-                        font-family: 'Neue Machina bold';
-                        font-size: 18px;
-                    }
-                }
-
-                .payment-detail-copy {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
+                    line-height: 146%;
+                    overflow-wrap: break-word;
                 }
             }
+
         }
-    }
-}
 
-@media (max-width:991.98px) {
-    .s-donate {
+        .payment-detail-copy {
+            position: relative;
+            padding-right: 30px;
 
-        ._container {
-            padding: 0 60px;
-            display: none;
-
-            &.accordion {
-                box-shadow: -446px -183px 212px -217px rgb(72 47 247 / 50%), 0 0px 69px -39px #777;
-                margin: 0 auto;
-                min-height: 0;
-                display: block;
-                padding-bottom: 40px;
-                // box-shadow: -100px 23px 416px -140px rgb(72 47 247 / 90%);
-                // box-shadow: -40px -39px 436px -159px rgb(72 47 247 / 90%);
-
-                .donate-top-block {
-                    display: flex;
-                    flex-direction: column-reverse;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 40px 0;
-
-                    img {
-                        padding-bottom: 0px;
-                        margin: 0;
-                        // width: 100%;
-                        min-width: 46px;
-                        max-width: 80px;
-                    }
-
-                    h2 {
-
-                        padding: 20px 0;
-                    }
-                }
-
-                .payment-switch-block {
-                    // border-bottom: 1px solid $first-tab-color;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-
-                    .button {
-                        margin-bottom: 10px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-family: 'Neue Machina bold';
-                        font-size: 16px;
-                        line-height: 23px;
-                        padding: 16px 16px 16px 52.77px;
-                        text-align: center;
-                        width: 80%;
-                        color: #FFFFFF;
-
-                        span {
-                            display: block;
-                            flex: 1;
-                        }
-
-                        img {
-                            // margin-right: 15px;
-                            flex: 0;
-                            // height: 18px;
-                            transform: rotate(45deg);
-                            transition: 0.5s;
-                        }
-
-                        &.active {
-                            img {
-                                transition: 0.5s;
-                                transform: rotate(270deg);
-                            }
-                        }
-
-                        &.active+.payment-details-blocks {
-                            margin-top: 10px;
-                            margin-bottom: 20px;
-                        }
-
-                        &.first {
-                            background-color: $first-tab-color;
-                            &:hover{
-                                background-color: darken($first-tab-color, 20%);
-                            }
-                        }
-
-                        &.second {
-                            background-color: $second-tab-color;
-                            &:hover{
-                                background-color: darken($second-tab-color, 20%);
-                            }
-                        }
-
-                        &.third {
-                            background-color: $third-tab-color;
-                            &:hover{
-                                background-color: darken($third-tab-color, 20%);
-                            }
-                        }
-
-                        &.fourth {
-                            background-color: $fourth-tab-color;
-                            &:hover{
-                                background-color: lighten($fourth-tab-color, 10%);
-                            }
-                        }
-                    }
-
-                    .payment-details-blocks {
-                        max-height: 0;
-                        overflow: hidden;
-                        transition: max-height 0.2s ease-out;
-                        width: 80%;
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        flex-direction: row;
-
-                        .payment-details-block-item {
-                            padding: 20px 30px;
-                            width: 100%;
-                            max-width: 100%
-                        }
-
-                    }
-                }
+            >* {
+                // overflow-x: auto;
             }
         }
 
-    }
-}
+        .payment-detail-link {
+            position: relative;
+            padding-right: 30px;
 
-@media (max-width:800px) {
-    .s-donate {
-        padding: 80px 20px 0px;
-
-        ._container {
-            padding: 0 60px;
-            display: none;
-
-            &.accordion {
-                min-height: 0;
-                display: block;
-                box-shadow: -326px -213px 212px -217px rgb(72 47 247 / 81%), 0 0px 69px -39px #777;
-                // box-shadow: -64px -86px 428px -141px rgb(72 47 247 / 90%);
-
-                .donate-top-block {
-                    display: flex;
-                    padding: 40px 0;
-
-                    img {
-                        padding-bottom: 0px;
-                        margin: 0;
-                        min-width: 46px;
-                        max-width: 80px;
-                        padding-bottom: 20px;
-                    }
-
-                    h2 {
-                        font-size: 36px;
-                        line-height: 39px;
-                        padding: 0 0;
-                    }
-                }
-
-                .payment-switch-block {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-
-                    .button {
-                        margin-bottom: 10px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 16px 16px 16px 52.77px;
-                        width: 100%;
-                        color: #FFFFFF;
-
-                        span {
-                            display: block;
-                            flex: 1;
-                        }
-
-                        img {
-                            flex: 0;
-                            transform: rotate(45deg);
-                            transition: 0.5s;
-                        }
-
-                        &.active {
-                            img {
-                                transition: 0.5s;
-                                transform: rotate(270deg);
-                            }
-                        }
-
-                        &.active+.payment-details-blocks {
-                            margin-top: 10px;
-                            margin-bottom: 20px;
-                        }
-
-                        &.first {
-                            background-color: $first-tab-color;
-                        }
-
-                        &.second {
-                            background-color: $second-tab-color;
-                        }
-
-                        &.third {
-                            background-color: $third-tab-color;
-                        }
-
-                        &.fourth {
-
-                            background-color: $fourth-tab-color;
-                        }
-                    }
-
-                    .payment-details-blocks {
-                        max-height: 0;
-                        overflow: hidden;
-                        transition: max-height 0.2s ease-out;
-                        width: 100%;
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-
-                        .payment-details-block-item {
-                            padding: 20px 0px;
-                            width: 100%;
-                            max-width: 100%
-                        }
-
-                    }
-                }
+            >* {
+                // overflow-x: auto;
             }
         }
 
-    }
-}
+        .payment-switch-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
-@media (max-width:620px) {
-    .s-donate {
-        padding: 80px 20px 0px;
-        @media (max-width:581.98px) {
-        padding: 60px 20px 0px;
-        }
-        ._container {
-            padding: 0 30px;
-            // display: none;
+            @media (min-width:992px) {
+                flex-direction: row;
+                border-bottom: 1px solid rgb(72, 47, 247);
 
-            &.accordion {
-                box-shadow: -216px -103px 222px -187px rgb(72 47 247 / 91%), 0 0px 69px -39px #777;
+                .donate-btn {
+                    border-radius: 4px 4px 0px 0px;
+                    text-align: center;
+                    padding: 17px 0 14px;
 
-                @media (max-width:445px) {
-                    padding: 0 15px;
-                    box-shadow: -266px -113px 122px -117px rgb(72 47 247 / 91%), 0 0px 69px -39px #777;
-                }
-
-                @media (max-width:345px) {
-                    box-shadow: -266px -113px 122px -77px rgb(72 47 247 / 91%), 0 0px 69px -39px #777;
-                    padding: 0 10px;
-                }
-
-                .donate-top-block {
-                    flex-direction: row;
-                    justify-content: space-between;
-
-                    img {
-                        height: 57px;
-                        padding: 0;
-
-                        @media (max-width:500px) {
-                            height: 32px;
-                            width: 46px;
-                        }
-                    }
-
-                    h2 {
-                        text-align: left;
-                        font-size: 28px;
-                        line-height: 29px;
-                    }
-                }
-
-                .payment-switch-block {
-
-                    .button {
-                        width: 100%;
-                        color: #FFFFFF;
-
-                        @media(max-width:450px) {
-                            padding-left: 16px;
-                        }
-                    }
-
-                    .payment-details-blocks {
-                        .payment-details-block-item {
-
-                            .payment-details-block-title {
-                                font-size: 18px;
-                                line-height: 24px;
-                            }
-
-                            .payment-details-block-body {
-                                padding-top: 24px;
-
-                                .copy-button,
-                                .link-button {
-                                    cursor: pointer;
-
-                                    img {
-                                        max-width: 20px;
-                                        max-height: 20px;
-
-                                        @media (max-width:345px) {
-                                            height: 14px;
-                                            width: 14px;
-                                        }
-                                    }
-                                }
-
-
-                                .card-number-bold {
-                                    font-family: 'Neue Machina bold';
-                                    font-size: 18px;
-                                    line-height: 25px;
-                                }
-
-                                .medium-name-16 {
-                                    font-family: 'Neue Machina medium';
-                                    font-size: 16px;
-                                    line-height: 23px;
-                                }
-
-                                .medium-name-18 {
-                                    font-family: 'Neue Machina medium';
-                                    font-size: 18px;
-                                    line-height: 26.28px;
-                                }
-
-                                .regular-name {
-                                    font-family: 'Neue Machina regular';
-                                    font-size: 12px;
-                                    line-height: 17.52px;
-
-                                    .bold-detail {
-                                        font-family: 'Neue Machina bold';
-                                        font-size: 12px;
-                                    }
-                                }
-
-                                .payment-detail-copy {
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-
-                                    .medium-name,
-                                    .medium-name-16,
-                                    .medium-name-18 {
-                                        font-size: 14px;
-                                        line-height: 16px;
-                                    }
-
-                                    @media(max-width:550px) {
-
-                                        .medium-name,
-                                        .medium-name-16,
-                                        .medium-name-18 {
-                                            font-size: 12px;
-                                            line-height: 16px;
-                                        }
-                                    }
-
-                                    @media(max-width:482px) {
-
-                                        .medium-name,
-                                        .medium-name-16,
-                                        .medium-name-18 {
-                                            font-size: 8px;
-                                            line-height: 16px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                    }
                 }
             }
-        }
 
+            .donate-btn {
+                transition: .2s all ease;
+
+                &:hover {
+                    transition: .2s all ease;
+
+                }
+
+                &.active {
+                    max-height: max-content;
+                }
+
+                &.first {
+                    background-color: $first-tab-color;
+
+                    &:hover {
+                        background-color: darken($color: $first-tab-color, $amount: 10);
+                    }
+                }
+
+                &.second {
+                    background-color: $second-tab-color;
+
+                    &:hover {
+                        background-color: darken($color: $second-tab-color, $amount: 10);
+                    }
+                }
+
+                &.third {
+                    background-color: $third-tab-color;
+
+                    &:hover {
+                        background-color: darken($color: $third-tab-color, $amount: 10);
+                    }
+                }
+
+                &.fourth {
+                    background-color: $fourth-tab-color;
+
+                    &:hover {
+                        background-color: darken($color: $fourth-tab-color, $amount: 10);
+                    }
+                }
+
+            }
+
+        }
     }
+
 }

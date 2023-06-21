@@ -1,179 +1,155 @@
 .s-hero {
-    padding-top: 106px;
-    background-image: url('../images/s-hero/bg-hero.png');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-size: 1065px;
+    position: relative;
 
-    ._container {
-        padding: 100px 120px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 289px;
+        right: 0;
+        background: #482FF7;
+        opacity: 0.6;
+        filter: blur(170px);
+        border-radius: 100px;
+        transform: rotate(180deg);
+        z-index: -1;
+        max-width: 388px;
+        width: 70%;
+        height: 50%;
+    }
 
-        .subheading {
-            padding-bottom: 20px;
-            margin: 0 auto;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 252px;
+        left: 0;
+        background: #F3F169;
+        ;
+        filter: blur(161px);
+        border-radius: 100px;
+        transform: rotate(180deg);
+        z-index: -1;
+        max-width: 388px;
+        width: 50%;
+        height: 50%;
+        opacity: 0.6;
+    }
+
+    @media (min-width:768px) {
+
+        &::after,
+        &::before {
+            opacity: 0.7;
         }
 
-        h1 {
-            font-family: 'Neue Machina bold';
-            font-size: 90px;
-            width: 100%;
-            max-width: 1144px;
-            line-height: 93.6px;
-            letter-spacing: 0em;
-            padding-top: 10px;
+    }
+
+    @media (min-width:992px) {
+        padding-top: 80px !important;
+
+        &::after {
+            left: 13%;
+        }
+
+        &::before {
+            right: 21%;
+        }
+
+    }
+
+    .container {
+        padding: 0 26px;
+        width: 100%;
+
+        >*:not(:last-child) {
+            padding: 0 0 16px;
             margin: 0 auto;
 
-            background-image: url('../images/s-hero/rays.png'), url('../images/s-hero/blue-sun.png');
+            @media (min-width:768px) {
+                padding: 0 0 30px;
+            }
+        }
+    }
+
+
+    .main-heading {
+        padding: 40px 0;
+
+        @media (min-width:768px) {
+            max-width: 80%;
+        }
+
+        @media (min-width:992px) {
+            max-width: 95%;
+        }
+
+        position: relative;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            z-index: -1;
             background-repeat: no-repeat;
-            background-position: left top, right bottom;
+            background-size: contain;
         }
 
-        p {
-            padding-top: 30px;
-            width: 100%;
-            max-width: 822px;
-            margin: 0 auto;
-            font-family: 'Neue Machina Regular';
-            text-align: center;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 29px;
-            letter-spacing: 0em;
+        &::after {
+            background-image: url('../assets/images/s-hero/rays.png');
+            top: -20px;
+            left: 0;
 
-        }
-
-        .button-block {
-            display: flex;
-            justify-content: center;
-            padding: 40px 0 20px;
-
-            a {
-                font-family: 'Neue Machina bold';
-                font-size: 18px;
-                line-height: 17.37px;
+            @media (min-width:992px) {
+                height: 40px;
+                width: 40px;
             }
         }
-    }
-}
 
-@media (max-width: 1320px) {
-    .s-hero {
-        background-size: 750px;
+        &::before {
+            background-image: url('../assets/images/s-hero/blue-sun.png');
+            bottom: 12px;
+            right: -17px;
+            animation: rotating 15s linear infinite;
 
-        ._container {
-            padding: 40px 40px;
-
-            h1 {
-                font-size: 48px;
-                max-width: 590px;
-                line-height: 49.92px;
-                margin: 0 auto;
-                background-size: 30px, 40px;
-            }
-        }
-    }
-}
-
-@media (max-width: 1149px) {
-    .s-hero {
-        padding-top: 68px;
-    }
-}
-
-@media (max-width: 750px) {
-    .s-hero {
-        padding-top: 68px;
-
-        ._container {
-            padding: 20px 20px;
-
-            .subheading {
-                max-width: 468px;
-            }
-
-            h1 {
-                max-width: 505px;
-                font-size: 40px;
-                line-height: 42px;
-
+            @media (min-width:992px) {
+                height: 58px;
+                width: 58px;
             }
         }
     }
 
-}
 
-@media (max-width: 582px) {
-    .s-hero {
-        ._container {
-            h1 {
-                max-width: 508px;
-                background-size: 25px, 30px;
-            }
 
-            .button-block {
-                a {
-                    width: 275px;
-                    text-align: center;
-                    font-size: 16px;
-                    line-height: 15.44px;
-                }
-            }
+    .regular-text {
+        margin: 0 auto;
+
+        @media (min-width:992px) {
+            max-width: 882px;
         }
     }
-}
-// @media (max-width: 506px) {
-//     .s-hero {
-//         ._container {
-//             h1 {
-//                 max-width: 508px;
-//                 background-size: 25px, 30px;
-//             }
 
-//             .button-block {
-//                 a {
-//                     width: 275px;
-//                     text-align: center;
-//                     font-size: 16px;
-//                     line-height: 15.44px;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-@media (max-width: 496px) {
-    .s-hero {
-        ._container {
-            .subheading {
-                font-size: 16px;
-                line-height: 23px;
-            }
-
-            h1 {
-                // max-width: 299px;
-                font-size: 34px;
-                line-height: 40px;
-                max-width: 414px;
-            }
-
-            p {
-                font-size: 14px;
-                line-height: 20px;
-            }
-        }
+    .btn-container {
+        text-align: center;
     }
+
 }
 
-@media (max-width: 425px) {
-    .s-hero {
-        ._container {
-            padding: 20px 10px;
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
 
-            h1 {
-                max-width: 283px;
-                font-size: 40px;
-                line-height: 42px;
-            }
-        }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }

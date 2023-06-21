@@ -1,0 +1,174 @@
+.main-heading {
+    font-family: 'Neue Machina bold';
+    font-size: 40px;
+    line-height: 104%;
+    letter-spacing: 0em;
+    text-align: center;
+
+    @media (min-width:768px) {
+        font-size: 48px;
+    }
+
+    @media (min-width:992px) {
+        font-size: 60px;
+    }
+
+    @media (min-width:1240px) {
+        font-size: 90px;
+    }
+}
+
+.block-heading {
+    padding: 0 10px 40px 20px;
+    font-family: 'Neue Machina bold';
+    font-size: 28px;
+    line-height: 112%;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0 auto;
+
+    @media (min-width:768px) {
+        font-size: 36px;
+    }
+
+    @media (min-width:992px) {
+        font-size: 48px;
+    }
+}
+
+.blue-subheading {
+    font-family: 'Neue Machina bold';
+    font-size: 16px;
+    line-height: 146%;
+    text-align: center;
+    color: #2D6CDF;
+
+    @media (min-width:768px) {
+        font-size: 20px;
+    }
+}
+
+.regular-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 146%;
+
+    &.bolder {
+        font-family: 'Neue Machina bold';
+    }
+
+    @media (min-width:768px) {
+        font-size: 20px;
+    }
+}
+
+
+.small-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 146%;
+    text-align: center;
+    margin: 0 auto;
+
+    @media (min-width:768px) {
+        font-size: 16px;
+    }
+
+    @media (min-width:992px) {
+        font-size: 20px;
+    }
+}
+
+.element-heading {
+    font-family: 'Neue Machina bold';
+    font-size: 18px;
+    line-height: 132%;
+    text-align: center;
+
+    @media (min-width:992px) {
+        font-size: 22px;
+    }
+
+}
+
+.c-label {
+    padding-top: 24px;
+    font-size: 16px;
+    line-height: 144%;
+    text-align: left;
+
+    .bolder {
+        font-family: 'Neue Machina bold';
+
+        &.n-line {
+            display: block;
+        }
+
+    }
+}
+
+.quote {
+    font-family: 'Neue Machina bold';
+    font-size: 24px;
+    line-height: 136%;
+}
+
+.heading-description__block {
+    * {
+        text-align: left !important;
+    }
+
+    .block-heading {
+        padding-bottom: 16px;
+    }
+
+    .regular-text {
+        padding-right: 25%;
+    }
+
+}
+
+.cta-heading {
+    font-family: 'Neue Machina bold';
+    font-size: 15vw; //60px
+    line-height: 87%;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width:768px) {
+        // font-size: 120px;
+    }
+
+    @media (min-width:992px) {
+        // font-size: 180px;
+    }
+
+    @media (min-width:1240px) {
+        font-size: 220px;
+
+    }
+
+}
+
+.copyright-text {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 146%;
+    color: rgba(15, 11, 48, 0.6);
+    display: inline-block;
+
+    &.underline {
+        text-decoration: underline;
+        transition: .2s all ease;
+    
+        &:hover {
+            text-shadow: 0.5px 0px 0px #000;
+            transition: .2s all ease;
+        }
+    }
+
+    @media (min-width:768px) {
+        font-size: 16px;
+    }
+
+}

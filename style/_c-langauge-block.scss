@@ -1,0 +1,73 @@
+.lang-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 2px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 34px;
+    overflow: hidden;
+
+    &:hover {
+        max-height: none;
+    }
+
+    .lang-item {
+        display: flex;
+        align-items: center;
+        padding: 6px;
+        border: 1px solid rgba(214, 214, 215, 1);
+        color: #fff;
+        font-size: 12px;
+        order: 2;
+        @media(min-width:992px){
+            background-color: #fff;
+        }
+
+        .lang-link {
+            margin-right: 6px;
+            height: 20px;
+            width: 30px;
+            display: inline-block;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            &.ua {
+                background-image: url('../assets/images/s-header/ua-flag.jpg');
+            }
+
+            &.uk {
+                background-image: url('../assets/images/s-header/gb-flag.webp');
+            }
+
+        }
+
+        &.active {
+
+            order: 1;
+
+            a {
+                pointer-events: none;
+            }
+
+            span {
+                display: none;
+            }
+
+            svg {
+                display: block;
+            }
+        }
+
+
+        span {
+            display: block;
+        }
+
+        svg {
+            display: none;
+        }
+    }
+}

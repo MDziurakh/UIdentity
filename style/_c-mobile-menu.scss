@@ -1,0 +1,65 @@
+.mobile-menu {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    right: -110vw;
+    @media (min-width:768px) {
+        right: -375px;
+        width: 375px;
+    }
+    width: 100%;
+    z-index: 100;
+    min-height: 100vh;
+    background-color: $blue-color;
+    transition: all .5s ease-in-out;
+    &.open{
+        right: 0;
+        transition: all .5s ease-in-out;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-top-section {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    .svg-close {
+        height: 30px;
+    }
+
+    .menu-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-size: 86px, 68px;
+        background-position: top center, bottom center;
+        background-image: url('../assets/images/s-header/yellow-flower-icon4.png'), url('../assets/images/s-header/yellow-arrow-icon.png');
+
+    }
+
+    .mobile-menu-list {
+        padding: 115px 0 160px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+
+    .btn-container {
+        padding: 20px 40px;
+        width: 100%;
+
+        .black-btn {
+            width: 100%;
+            max-width: 350px;
+        }
+    }
+}
