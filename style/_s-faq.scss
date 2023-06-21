@@ -36,12 +36,10 @@
     border-right: none;
     border-bottom: none;
     border-left: none;
-    padding: 32px 0 0;
     text-align: left;
 
 
     .accordion-item {
-        padding-bottom: 34px;
         
         &::after {
             content: '';
@@ -52,13 +50,17 @@
     }
 
     .accordion {
+        padding: 24px 0 22px;
+        @media (min-width:768px) {
+            padding: 34px 0 32px;
+        }   
         background-color: #fff;
         cursor: pointer;
         transition: 0.4s;
     }
 
     .panel {
-        margin-top: 32px;
+        // margin-top: 32px;
         margin-bottom: 8px;
         max-height: 0;
         overflow: hidden;

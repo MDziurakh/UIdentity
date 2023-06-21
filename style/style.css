@@ -471,16 +471,22 @@ header .laptop-menu-list {
   position: absolute;
   height: 18px;
   width: 18px;
-  top: 5px;
+  top: 28px;
   right: 24px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-image: url("../assets/images/s-faq/plus.png");
   transition: all 0.3s ease;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .faq-btn::after {
+    top: 39px;
+  }
 }
 .faq-btn.active::after {
-  transform: rotate(180deg);
+  transform: rotate(135deg);
 }
 
 .menu-item-link {
@@ -515,7 +521,6 @@ header .laptop-menu-list {
 }
 
 .block-heading {
-  padding: 0 10px 40px 20px;
   font-family: "Neue Machina bold";
   font-size: 28px;
   line-height: 112%;
@@ -1758,11 +1763,7 @@ header .laptop-menu-list {
   border-right: none;
   border-bottom: none;
   border-left: none;
-  padding: 32px 0 0;
   text-align: left;
-}
-.faq-accordion .accordion-item {
-  padding-bottom: 34px;
 }
 .faq-accordion .accordion-item::after {
   content: "";
@@ -1771,12 +1772,17 @@ header .laptop-menu-list {
   border-bottom: 1px solid rgb(15, 11, 48);
 }
 .faq-accordion .accordion {
+  padding: 24px 0 22px;
   background-color: #fff;
   cursor: pointer;
   transition: 0.4s;
 }
+@media (min-width: 768px) {
+  .faq-accordion .accordion {
+    padding: 34px 0 32px;
+  }
+}
 .faq-accordion .panel {
-  margin-top: 32px;
   margin-bottom: 8px;
   max-height: 0;
   overflow: hidden;

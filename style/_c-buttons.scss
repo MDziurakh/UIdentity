@@ -145,17 +145,21 @@
         position: absolute;
         height: 18px;
         width: 18px;
-        top: 5px;
+        top: 28px;
         right: 24px;
+        @media (min-width:768px) {
+            top: 39px;
+        }
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         background-image: url('../assets/images/s-faq/plus.png');
         transition: all .3s ease;
+        cursor: pointer;
     }
     
     &.active::after {
-        transform: rotate(180deg);
+        transform: rotate(135deg);
 
     }
 }
