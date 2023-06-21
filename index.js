@@ -1,40 +1,40 @@
 const mobileMenu = document.querySelector(".mobile-menu");
-const mobileMenuHandler = document.querySelectorAll(".menu-handler").forEach((btn) =>
+const mobileMenuHandler = document
+  .querySelectorAll(".menu-handler")
+  .forEach((btn) =>
     btn.addEventListener("click", () => {
       mobileMenu.classList.toggle("open");
-      if(window.screen.width < 768 && mobileMenu.classList.contains("open")){
-        document.body.style.overflow = 'hidden';
-      } else{
-        document.body.style.overflow = 'auto';
+      if (window.screen.width < 768 && mobileMenu.classList.contains("open")) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
       }
       if (mobileMenu.classList.contains("open")) {
-        document.addEventListener("click", documentActions);
-        // console.log("add closer");
+        document.addEventListener("click", menuOutClickWatcher);
       } else {
-        // console.log("remove closer");
-        document.removeEventListener("click", documentActions);
+        document.removeEventListener("click", menuOutClickWatcher);
       }
     })
   );
 
-function documentActions(e) {
+function menuOutClickWatcher(e) {
   const targetElement = e.target;
   if (
     !targetElement.closest(".mobile-menu") &&
     !targetElement.closest(".menu-handler")
   ) {
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
     mobileMenu.classList.remove("open");
   } else if (
     typeof targetElement.href !== "undefined" &&
     !targetElement.closest(".lang-block")
   ) {
     mobileMenu.classList.remove("open");
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
   }
 }
 
-// перемикач табів
+////////////////// перемикач табів
 let tabsContent = document.querySelectorAll(".payment-details-blocks");
 let paymentSwitchBlock = document.querySelector(".payment-switch-block");
 let sDonateContainer = document.querySelector(".s-donate .container");
@@ -67,7 +67,7 @@ buttons.forEach((button) => {
   });
 });
 
-// копі іконки
+//////////////////////// копі іконки
 const copyButtons = document.querySelectorAll(".copy-btn");
 copyButtons.forEach((copyButton) => {
   const copyContent = async () => {
@@ -97,7 +97,7 @@ copyButtons.forEach((copyButton) => {
   copyButton.addEventListener("click", copyContent);
 });
 
-// акордеон в мобайлі
+//////////////// акордеон в мобайлі
 let accSwitch = document.querySelectorAll(".acc-switch");
 
 const donateAccFunc = () => {
@@ -121,46 +121,38 @@ const donateAccFunc = () => {
 };
 
 donateAccFunc();
-//
 
+//////////////// моб. наша команда
 
-const swifferContainer = document.querySelector('.swiffy-slider ul');
+const swifferContainer = document.querySelector(".swiffy-slider ul");
 
-const swiffer = document.querySelector('.swiffy-slider')
-const swifferResizer = () =>{
-  if(window.screen.width >=768 && swifferContainer.classList.contains('slider-container')){
-    swifferContainer.classList.remove('slider-container');
-    swifferContainer.classList.add('our-team-static');
-  } else if(window.screen.width < 768 && swifferContainer.classList.contains('our-team-static')){
-    swifferContainer.classList.add('slider-container');
-    swifferContainer.classList.remove('our-team-static');
+const swiffer = document.querySelector(".swiffy-slider");
+const swifferResizer = () => {
+  if (
+    window.screen.width >= 768 &&
+    swifferContainer.classList.contains("slider-container")
+  ) {
+    swifferContainer.classList.remove("slider-container");
+    swifferContainer.classList.add("our-team-static");
+  } else if (
+    window.screen.width < 768 &&
+    swifferContainer.classList.contains("our-team-static")
+  ) {
+    swifferContainer.classList.add("slider-container");
+    swifferContainer.classList.remove("our-team-static");
   }
-}
-window.addEventListener('resize', swifferResizer);
+};
+window.addEventListener("resize", swifferResizer);
 
-const swifferHandler = () =>{
-  if(window.screen.width >=768){
-    swifferContainer.classList.remove('slider-container');
-    swifferContainer.classList.add('our-team-static');
+const swifferHandler = () => {
+  if (window.screen.width >= 768) {
+    swifferContainer.classList.remove("slider-container");
+    swifferContainer.classList.add("our-team-static");
   }
-}
-swifferHandler()
+};
+swifferHandler();
 
-// плавний перехід
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//   anchor.addEventListener('click', function (e) {
-//       e.preventDefault();
-
-//       document.querySelector(this.getAttribute('href')).scrollIntoView({
-//           behavior: 'smooth'
-//       });
-//   });
-// });
-// window.onscroll = function () {
-//   scrollFunction();
-// };
-
-// збір коштів
+///////////// збір коштів
 
 const circleFunction = () => {
   let circleColor1 = "rgba(243, 241, 105, 1)";
@@ -200,171 +192,181 @@ const circleFunction = () => {
 
 circleFunction();
 
-
 ////////// imgs carousel
 
 class InfiniteSlider {
-	constructor(animTime = '10000', selector = '.slider', container = '#slider-container') {
-		this.slider = document.querySelector(selector)
-		this.container = document.querySelector(container)
-		this.width = 0
-		this.oldWidth = 0
-		this.duration = parseInt(animTime)
-		this.start = 0
-		this.refresh = 0 //0, 1, or 2, as in steps of the animation
-		this._prevStop = false
-		this._stop = false
-		this._oldTimestamp = 0
-	}
-	
-	animate() {
-		/* fix for browsers who like to run JS before images are loaded */
-		const imgs = Array.prototype.slice.call(this.slider.querySelectorAll('img'))
-						.filter(img => {
-							return img.naturalWidth === 0
-						})
-		if (imgs.length > 0) {
-			window.requestAnimationFrame(this.animate.bind(this));
-			return
-		}
-		
-		/* Add another copy of the slideshow to the end, keep track of original width */
-		this.oldWidth = this.slider.offsetWidth
-		const sliderText = '<span class="slider-extra">' + this.slider.innerHTML + '</span>'
-		this.slider.innerHTML += sliderText
+  constructor(
+    animTime = "10000",
+    selector = ".slider",
+    container = "#slider-container"
+  ) {
+    this.slider = document.querySelector(selector);
+    this.container = document.querySelector(container);
+    this.width = 0;
+    this.oldWidth = 0;
+    this.duration = parseInt(animTime);
+    this.start = 0;
+    this.refresh = 0; //0, 1, or 2, as in steps of the animation
+    this._prevStop = false;
+    this._stop = false;
+    this._oldTimestamp = 0;
+  }
 
-		/* can have content still when we move past original slider */
-		this.width = this.slider.offsetWidth
-		const minWidth = 2 * screen.width
+  animate() {
+    /* fix for browsers who like to run JS before images are loaded */
+    const imgs = Array.prototype.slice
+      .call(this.slider.querySelectorAll("img"))
+      .filter((img) => {
+        return img.naturalWidth === 0;
+      });
+    if (imgs.length > 0) {
+      window.requestAnimationFrame(this.animate.bind(this));
+      return;
+    }
 
-		/* Add more slideshows if needed to keep a continuous stream of content */
-		while (this.width < minWidth) {
-			this.slider.innerHTML += sliderText
-			this.width = this.slider.width
-		}
-		this.slider.querySelector('.slider-extra:last-child').classList.add('slider-last')
-		
-		/* loop animation endlesssly (this is pretty cool) */
-		window.requestAnimationFrame(this.controlAnimation.bind(this))
-	}
-	
-	halt() {
-		this._stop = true
-		this._prevStop = false
-	}
-	
-	go() {
-		this._stop = false
-		this._prevStop = true
-	}
-	
-	stagnate() {
-		this.container.style.overflowX = "scroll"
-	}
-	
-	controlAnimation(timestamp) {
-		//console.log('this.stop: ' + this._stop + '\nthis.prevStop: ' + this._prevStop)
-		if (this._stop === true) {
-			if (this._prevStop === false) {
-				this.slider.style.marginLeft = getComputedStyle(this.slider).marginLeft
-				this._prevStop = true
-				this._oldTimestamp = timestamp
-			}
-		} else if (this._stop === false && this._prevStop === true) {
-			this._prevStop = false
-			this.start = this.start + (timestamp - this._oldTimestamp)
-		} else {
-			//reset animation
-			if (this.refresh >= 1) {
-				this.start = timestamp
-				this.slider.style.marginLeft = 0
-				this.refresh = 0
-				window.requestAnimationFrame(this.controlAnimation.bind(this))
-				return
-			}
-			if (timestamp - this.start >= this.duration) {
-				this.refresh = 1
-			}
-			
-			const perc = ((timestamp - (this.start)) / this.duration) * this.oldWidth
-			this.slider.style.marginLeft = (-perc) + 'px'
-		}
-		window.requestAnimationFrame(this.controlAnimation.bind(this))
-		return
-	}
-	
-	getIeWidth() {
-		this.slider.style.marginLeft = '-99999px';
-	}
-	
-	ie11Fix() {
-		this.slider.querySelector('.slider-last').style.position = 'absolute';
-	}
+    /* Add another copy of the slideshow to the end, keep track of original width */
+    this.oldWidth = this.slider.offsetWidth;
+    const sliderText =
+      '<span class="slider-extra">' + this.slider.innerHTML + "</span>";
+    this.slider.innerHTML += sliderText;
+
+    /* can have content still when we move past original slider */
+    this.width = this.slider.offsetWidth;
+    const minWidth = 2 * screen.width;
+
+    /* Add more slideshows if needed to keep a continuous stream of content */
+    while (this.width < minWidth) {
+      this.slider.innerHTML += sliderText;
+      this.width = this.slider.width;
+    }
+    this.slider
+      .querySelector(".slider-extra:last-child")
+      .classList.add("slider-last");
+
+    /* loop animation endlesssly (this is pretty cool) */
+    window.requestAnimationFrame(this.controlAnimation.bind(this));
+  }
+
+  halt() {
+    this._stop = true;
+    this._prevStop = false;
+  }
+
+  go() {
+    this._stop = false;
+    this._prevStop = true;
+  }
+
+  stagnate() {
+    this.container.style.overflowX = "scroll";
+  }
+
+  controlAnimation(timestamp) {
+    //console.log('this.stop: ' + this._stop + '\nthis.prevStop: ' + this._prevStop)
+    if (this._stop === true) {
+      if (this._prevStop === false) {
+        this.slider.style.marginLeft = getComputedStyle(this.slider).marginLeft;
+        this._prevStop = true;
+        this._oldTimestamp = timestamp;
+      }
+    } else if (this._stop === false && this._prevStop === true) {
+      this._prevStop = false;
+      this.start = this.start + (timestamp - this._oldTimestamp);
+    } else {
+      //reset animation
+      if (this.refresh >= 1) {
+        this.start = timestamp;
+        this.slider.style.marginLeft = 0;
+        this.refresh = 0;
+        window.requestAnimationFrame(this.controlAnimation.bind(this));
+        return;
+      }
+      if (timestamp - this.start >= this.duration) {
+        this.refresh = 1;
+      }
+
+      const perc = ((timestamp - this.start) / this.duration) * this.oldWidth;
+      this.slider.style.marginLeft = -perc + "px";
+    }
+    window.requestAnimationFrame(this.controlAnimation.bind(this));
+    return;
+  }
+
+  getIeWidth() {
+    this.slider.style.marginLeft = "-99999px";
+  }
+
+  ie11Fix() {
+    this.slider.querySelector(".slider-last").style.position = "absolute";
+  }
 }
 
 function detectIE() {
-	var ua = window.navigator.userAgent
-	var msie = ua.indexOf('MSIE ')
+  var ua = window.navigator.userAgent;
+  var msie = ua.indexOf("MSIE ");
 
-	if (msie > 0) {
-		// IE 10 or older => return version number
-		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10)
-	}
-	
-	var trident = ua.indexOf('Trident/')
-	if (trident > 0) {
-		// IE 11 => return version number
-		var rv = ua.indexOf('rv:')
-		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10)
-	}
+  if (msie > 0) {
+    // IE 10 or older => return version number
+    return parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)), 10);
+  }
 
-	var edge = ua.indexOf('Edge/');
-	if (edge > 0) {
-		// Edge (IE 12+) => return version number
-		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10)
-	}
+  var trident = ua.indexOf("Trident/");
+  if (trident > 0) {
+    // IE 11 => return version number
+    var rv = ua.indexOf("rv:");
+    return parseInt(ua.substring(rv + 3, ua.indexOf(".", rv)), 10);
+  }
 
-	// other browser
-	return false
+  var edge = ua.indexOf("Edge/");
+  if (edge > 0) {
+    // Edge (IE 12+) => return version number
+    return parseInt(ua.substring(edge + 5, ua.indexOf(".", edge)), 10);
+  }
+
+  // other browser
+  return false;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-	const slider = new InfiniteSlider(20000)
-	const ie = detectIE()
-	
-	//Dont animate under IE10, just place the images
-	if (ie !== false && ie < 10) {
-		slider.stagnate()
-		return
-	}
-	//IE 11 and lower, fix for width *increasing* as more of the slider is shown
-	if (ie !== false && ie < 12) { slider.getIeWidth() }
-	
-	slider.animate()
-	document.querySelector('#slider-container')
-		.addEventListener('mouseenter', slider.halt.bind(slider))
-	document.querySelector('#slider-container')
-		.addEventListener('mouseleave', slider.go.bind(slider))
-	
-	if (ie === 11) {
-		setTimeout(slider.ie11Fix.bind(slider), 1000)
-	}
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = new InfiniteSlider(20000);
+  const ie = detectIE();
+
+  //Dont animate under IE10, just place the images
+  if (ie !== false && ie < 10) {
+    slider.stagnate();
+    return;
+  }
+  //IE 11 and lower, fix for width *increasing* as more of the slider is shown
+  if (ie !== false && ie < 12) {
+    slider.getIeWidth();
+  }
+
+  slider.animate();
+  document
+    .querySelector("#slider-container")
+    .addEventListener("mouseenter", slider.halt.bind(slider));
+  document
+    .querySelector("#slider-container")
+    .addEventListener("mouseleave", slider.go.bind(slider));
+
+  if (ie === 11) {
+    setTimeout(slider.ie11Fix.bind(slider), 1000);
+  }
 });
 ///////////////////////
-
 
 //////// faq-accordion
 const acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+  acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
     const panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
+    }
   });
 }

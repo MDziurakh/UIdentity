@@ -1,4 +1,7 @@
 .mobile-menu {
+    @media (min-width:992px) {
+        display: none;
+    }
     padding: 20px 0;
     position: fixed;
     top: 0;

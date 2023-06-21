@@ -1,3 +1,6 @@
+// * {
+//     outline: 1px solid #f00 !important;
+//   }
 @import 'fonts';
 @import 'colors';
 
@@ -73,7 +76,7 @@ body {
     color: #000;
     min-height: 100vh;
     position: relative;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 .wrapper {
@@ -96,17 +99,25 @@ body {
 }
 
 .section-wrapper {
-    padding: 65px 0 15px;
-    // padding: 40px 0;
+    padding: 40px 0;
+    // padding: 65px 0 15px;
 
     @media (min-width:768px) {
-        // padding: 50px 0;
-        padding: 70px 0 30px;
+        padding: 50px 0;
+        // padding: 70px 0 30px;
     }
 
     @media (min-width:992px) {
-        // padding: 60px 0;
-        padding: 80px 0 20px;
+        padding: 60px 0;
+        // padding: 80px 0 20px;
     }
 
+}
+
+section[id^='s-'] {
+    scroll-margin-top: 60px;
+
+    @media (min-width:768px) {
+        scroll-margin-top: 80px;
+    }
 }

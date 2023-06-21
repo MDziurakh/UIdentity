@@ -18,7 +18,7 @@ footer {
             grid-template-areas:
                 'logo menu social';
             column-gap: 30px;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: 1.5fr 1fr 1fr;
             padding-bottom: 80px;
         }
     }
@@ -86,13 +86,27 @@ footer {
     }
 
     .copyright-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px 40px;
+        .copyright{
+            flex: 1 0 100%;
+        }
 
-        display: grid;
-        column-gap: 30px;
-        grid-template-columns: 2fr 1fr 1fr;
 
         * {
-            text-align: left;
+            text-align: center;
+        }
+        
+        @media (min-width:768px) {
+            display: grid;
+            column-gap: 30px;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            * {
+                text-align: left;
+            }
         }
     }
 }

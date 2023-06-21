@@ -51,8 +51,9 @@
 
     .accordion {
         padding: 24px 0 22px;
+        padding-right: 50px;
         @media (min-width:768px) {
-            padding: 34px 0 32px;
+            padding: 34px 50px 32px 0;
         }   
         background-color: #fff;
         cursor: pointer;
@@ -76,7 +77,7 @@
     }
 
     .faq-list {
-        .bolder {
+        .list-heading {
             font-family: "Neue Machina bold";
         }
 

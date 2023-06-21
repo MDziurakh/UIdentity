@@ -79,7 +79,10 @@
         }
 
         @media (min-width:992px) {
-            max-width: 95%;
+            max-width: 75%;
+        }
+        @media (min-width:1240px) {
+            max-width: 81%;
         }
 
         position: relative;

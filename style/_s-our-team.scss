@@ -58,7 +58,9 @@
             width: 100%;
         }
     }
-
+    .slider-item{
+        margin-top: 30px;
+    }
     .slider-container {
         overflow-y: hidden;
         grid-auto-columns: minmax(282px, calc(768px/2)) !important;
