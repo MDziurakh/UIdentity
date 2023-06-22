@@ -278,6 +278,9 @@ header .laptop-menu-list {
   width: 100%;
   max-width: 350px;
 }
+.mobile-menu .lang-item {
+  border-color: white !important;
+}
 
 .lang-block {
   position: absolute;
