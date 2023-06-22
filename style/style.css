@@ -267,6 +267,9 @@ header .laptop-menu-list {
   align-items: center;
   gap: 28px;
 }
+.mobile-menu .mobile-menu-list .menu-item-link {
+  color: white;
+}
 .mobile-menu .btn-container {
   padding: 20px 40px;
   width: 100%;
